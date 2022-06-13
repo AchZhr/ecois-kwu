@@ -1,627 +1,689 @@
- <?php
-$siswa = $this->db->query("select * from siswa")->num_rows();
-$kelas = $this->db->query("select * from kelas")->num_rows();
+ <!--====== App Content ======-->
+ <div class="app-content">
 
-$rpl = $this->db->query("select * from vw_siswa where jurusan='RPL'")->num_rows();
-$mesin = $this->db->query("select * from vw_siswa where jurusan='TPM'")->num_rows();
-$listrik = $this->db->query("select * from vw_siswa where jurusan='TITL'")->num_rows();
-$las = $this->db->query("select * from vw_siswa where jurusan='LAS'")->num_rows();
+     <!--====== Primary Slider ======-->
+     <div class="s-skeleton s-skeleton--h-600 s-skeleton--bg-grey">
+         <div class="owl-carousel primary-style-1" id="hero-slider">
+             <div class="hero-slide hero-slide--1">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-12">
+                             <div class="slider-content slider-content--animation">
+
+                                 <span class="content-span-1 u-c-secondary">Latest Update Stock</span>
+
+                                 <span class="content-span-2 u-c-secondary">30% Off On Electronics</span>
+
+                                 <span class="content-span-3 u-c-secondary">Find electronics on best prices, Also
+                                     Discover most selling products of electronics</span>
+
+                                 <span class="content-span-4 u-c-secondary">Starting At
+
+                                     <span class="u-c-brand">$1050.00</span></span>
+
+                                 <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">SHOP
+                                     NOW</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="hero-slide hero-slide--2">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-12">
+                             <div class="slider-content slider-content--animation">
+
+                                 <span class="content-span-1 u-c-white">Find Top Brands</span>
+
+                                 <span class="content-span-2 u-c-white">10% Off On Electronics</span>
+
+                                 <span class="content-span-3 u-c-white">Find electronics on best prices, Also
+                                     Discover most selling products of electronics</span>
+
+                                 <span class="content-span-4 u-c-white">Starting At
+
+                                     <span class="u-c-brand">$380.00</span></span>
+
+                                 <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">SHOP
+                                     NOW</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="hero-slide hero-slide--3">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-12">
+                             <div class="slider-content slider-content--animation">
+
+                                 <span class="content-span-1 u-c-white">Find Top Brands</span>
+
+                                 <span class="content-span-2 u-c-white">10% Off On Electronics</span>
+
+                                 <span class="content-span-3 u-c-white">Find electronics on best prices, Also
+                                     Discover most selling products of electronics</span>
+
+                                 <span class="content-span-4 u-c-white">Starting At
+
+                                     <span class="u-c-brand">$550.00</span></span>
+
+                                 <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">SHOP
+                                     NOW</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!--====== End - Primary Slider ======-->
+
+
+     <!--====== Section 1 ======-->
+     <div class="u-s-p-y-60">
+
+         <!--====== Section Intro ======-->
+         <div class="section__intro u-s-m-b-46">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="section__text-wrap">
+                             <h1 class="section__heading u-c-secondary u-s-m-b-12">SHOP BY DEALS</h1>
+
+                             <span class="section__span u-c-silver">BROWSE FAVOURITE DEALS</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!--====== End - Section Intro ======-->
+
+
+         <!--====== Section Content ======-->
+         <div class="section__content">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-5 col-md-5 u-s-m-b-30">
+
+                         <a class="collection" href="shop-side-version-2.html">
+                             <div class="aspect aspect--bg-grey aspect--square">
+
+                                 <img class="aspect__img collection__img" src="<?php echo base_url(); ?>assets/client/images/collection/coll-1.jpg" alt="">
+                             </div>
+                         </a>
+                     </div>
+                     <div class="col-lg-7 col-md-7 u-s-m-b-30">
+
+                         <a class="collection" href="shop-side-version-2.html">
+                             <div class="aspect aspect--bg-grey aspect--1286-890">
+
+                                 <img class="aspect__img collection__img" src="<?php echo base_url(); ?>assets/client/images/collection/coll-2.jpg" alt="">
+                             </div>
+                         </a>
+                     </div>
+                     <div class="col-lg-7 col-md-7 u-s-m-b-30">
+
+                         <a class="collection" href="shop-side-version-2.html">
+                             <div class="aspect aspect--bg-grey aspect--1286-890">
+
+                                 <img class="aspect__img collection__img" src="<?php echo base_url(); ?>assets/client/images/collection/coll-3.jpg" alt="">
+                             </div>
+                         </a>
+                     </div>
+                     <div class="col-lg-5 col-md-5 u-s-m-b-30">
+
+                         <a class="collection" href="shop-side-version-2.html">
+                             <div class="aspect aspect--bg-grey aspect--square">
+
+                                 <img class="aspect__img collection__img" src="<?php echo base_url(); ?>assets/client/images/collection/coll-4.jpg" alt="">
+                             </div>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <!--====== Section Content ======-->
+     </div>
+     <!--====== End - Section 1 ======-->
+
+
+     <!--====== Section 2 ======-->
+     <div class="u-s-p-b-60">
+
+         <!--====== Section Intro ======-->
+         <div class="section__intro u-s-m-b-16">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="section__text-wrap">
+                             <h1 class="section__heading u-c-secondary u-s-m-b-12">TOP TRENDING</h1>
+
+                             <span class="section__span u-c-silver">CHOOSE CATEGORY</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!--====== End - Section Intro ======-->
+
+
+         <!--====== Section Content ======-->
+         <div class="section__content">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="filter-category-container">
+                             <div class="filter__category-wrapper">
+
+                                 <button class="btn filter__btn filter__btn--style-1 js-checked" type="button" data-filter="*">ALL</button>
+                             </div>
+                             <div class="filter__category-wrapper">
+
+                                 <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".headphone">HEADPHONES</button>
+                             </div>
+                             <div class="filter__category-wrapper">
+
+                                 <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".smartphone">SMARTPHONES</button>
+                             </div>
+                             <div class="filter__category-wrapper">
+
+                                 <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".sportgadget">SPORT GADGETS</button>
+                             </div>
+                             <div class="filter__category-wrapper">
+
+                                 <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".dslr">DSLR</button>
+                             </div>
+                         </div>
+                         <div class="filter__grid-wrapper u-s-m-t-30">
+                             <div class="row">
+                                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
+                                     <div class="product-o product-o--hover-on product-o--radius">
+                                         <div class="product-o__wrap">
+
+                                             <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                 <img class="aspect__img" src="<?php echo base_url(); ?>assets/client/images/product/electronic/product2.jpg" alt=""></a>
+
+                                         </div>
+
+                                         <span class="product-o__category">
+
+                                             <a href="shop-side-version-2.html">Electronics</a></span>
+
+                                         <span class="product-o__name">
+
+                                             <a href="product-detail.html">Red Wireless Headphone</a></span>
+                                         <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                             <span class="product-o__review">(23)</span>
+                                         </div>
+
+                                         <span class="product-o__price">$125.00
+
+                                             <span class="product-o__discount">$160.00</span></span>
+                                         <span style="margin-top: 3px;font-size:10pt">Alfaris
+                                             Store</span>
+
+                                     </div>
+                                 </div>
+
+
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-lg-12">
+                         <div class="load-more">
+
+                             <button class="btn btn--e-brand" type="button">Load More</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!--====== End - Section Content ======-->
+     </div>
+     <!--====== End - Section 2 ======-->
 
 
 
-?>
- <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-          Dashboard
-           <?php
-				      if($this->session->userdata('role')=='Admin' || $this->session->userdata('role')=='Petugas'){
-			     ?>
-             <small>Manajemen Pembayaran SPP</small>
-           <?php
-				      }else{
-           ?>
-             <small>Siswa</small>
-           <?php
-				      }
-			     ?>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
-      </ol>
-    </section>
 
-    <!-- Main content -->
-    <section class="content">
-      <!-- Small boxes (Stat box) -->
-      <!-- /.row -->
-      <!-- Main row -->
-      <!-- Data Sekolah -->
-        <?php
-				  if($this->session->userdata('role')=='Admin' || $this->session->userdata('role')=='Petugas'){
-			  ?>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="small-box bg-green">
-              <div class="inner">
-                <h3><?php echo $siswa; ?></h3>
-                <p>Siswa Aktif</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="small-box bg-aqua">
-              <div class="inner">
-                <h3>4</h3>
-                <p>Jurusan</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-gear"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="small-box bg-yellow">
-              <div class="inner">
-                <h3><?php echo $kelas; ?></h3>
-                <p>kelas</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-home"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+     <!--====== Section 9 ======-->
+     <div class="u-s-p-b-60">
 
-        <!-- Daftar Jurusan -->
-        <h2 class="page-header no-margin">Daftar Jurusan</h2>
-        <div class="row">
-          <!-- Teknik Mesin -->
-          <div class="col-md-3">
-            <div class="box box-default collapsed-box ">
-              <div class="box-header with-border">
-                <h3 class="box-title"><i class="fa fa-gears"></i> TPm</h3>
-                <br>
-                <small>(Teknik Permesinan)</small>
+         <!--====== Section Content ======-->
+         <div class="section__content">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-4 col-md-6 u-s-m-b-30">
+                         <div class="service u-h-100">
+                             <div class="service__icon"><i class="fas fa-truck"></i></div>
+                             <div class="service__info-wrap">
 
-                <div class="box-tools pull-right">
-                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="box-body">
-                <ul class="nav nav-stacked">
-                  <li><a href="#">Total Siswa <span class="pull-right badge bg-blue"><?php echo $mesin; ?></span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Teknik Listrik -->
-          <div class="col-md-3">
-            <div class="box box-default collapsed-box">
-              <div class="box-header with-border">
-                <h3 class="box-title"><i class="fa fa-flash"></i> TITL</h3>
-                <br>
-                <small>(Teknik Instalasi Tenaga Listrik)</small>
+                                 <span class="service__info-text-1">Free Shipping</span>
 
-                <div class="box-tools pull-right">
-                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="box-body">
-                <ul class="nav nav-stacked">
-                  <li><a href="#">Total Siswa <span class="pull-right badge bg-blue"><?php echo $listrik; ?></span></a></li>
-                  <!-- <li><a href="#">Terbayar <span class="pull-right badge bg-green">31</span></a></li>
-                  <li><a href="#">Belum Bayar <span class="pull-right badge bg-red">158</span></a></li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Rekaya Perangkat Lunak -->
-          <div class="col-md-3">
-            <div class="box box-default collapsed-box">
-              <div class="box-header with-border">
-                <h3 class="box-title"><i class="fa fa-laptop"></i> RPL</h3>
-                <br>
-                <small>(Rekayasa Perangkat Lunak)</small>
+                                 <span class="service__info-text-2">Free shipping on all US order or order above
+                                     $200</span>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 u-s-m-b-30">
+                         <div class="service u-h-100">
+                             <div class="service__icon"><i class="fas fa-redo"></i></div>
+                             <div class="service__info-wrap">
 
-                <div class="box-tools pull-right">
-                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="box-body">
-                <ul class="nav nav-stacked">
-                  <li><a href="#">Total Siswa <span class="pull-right badge bg-blue"><?php echo $rpl; ?></span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Teknik Pengelasan -->
-          <div class="col-md-3">
-            <div class="box box-default collapsed-box">
-              <div class="box-header with-border">
-                <h3 class="box-title"><i class="fa fa-fire"></i> Las</h3>
-                <br>
-                <small>(Teknik Pengelasan)</small>
+                                 <span class="service__info-text-1">Shop with Confidence</span>
 
-                <div class="box-tools pull-right">
-                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="box-body">
-                <ul class="nav nav-stacked">
-                  <li><a href="#">Total Siswa <span class="pull-right badge bg-blue"><?php echo $las; ?></span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-         <?php
-				  if($this->session->userdata('role')=='Admin'){
-			  ?>
-        <!-- Transaksi Terakhir -->
-        <div class="box box-info">
-          <div class="box-header with-border">
-            <h3 class="box-title">Transaksi Hari Ini</h3>
+                                 <span class="service__info-text-2">Our Protection covers your purchase from
+                                     click to delivery</span>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 u-s-m-b-30">
+                         <div class="service u-h-100">
+                             <div class="service__icon"><i class="fas fa-headphones-alt"></i></div>
+                             <div class="service__info-wrap">
 
-            <div class="box-tools pull-right">
-              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-              </button>
-            </div>
-          </div>
-          <!-- /.box-header -->
-          <div class="box-body">
-            <div class="table-responsive">
-              <table id="tabel" class="table table-bordered table-hover table no-margin">
-                <thead>
-                  <tr>
-                    <th>Tanggal</th>
-                    <th>No Pembayaran</th>
-                    <th>Nis</th>
-                    <th>Nama</th>
-                    <th>Total</th>
-                    <th>Nama Petugas</th>
-                    <th>Detail Pembayaran</th>
-                  </tr>
-                </thead>
-                <tbody>
+                                 <span class="service__info-text-1">24/7 Help Center</span>
 
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <!-- /.box-body -->
-        </div>
+                                 <span class="service__info-text-2">Round-the-clock assistance for a smooth
+                                     shopping experience</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!--====== End - Section Content ======-->
+     </div>
+     <!--====== End - Section 9 ======-->
 
-        <?php
-          }
-				  }else{
-            $nis=$this->session->userdata('userid');
-            $siswa=$this->db->query("select * from vw_siswa where nis='$nis'")->row();
-        ?>
-        
 
-         <form id="frmSiswa" onsubmit="return false;">
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Data Siswa</h3>
 
-              <!-- <div class="btn-group pull-right">
-                <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-th"></i></button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#" id=""><i class="fa fa-plus"></i>Tambah</a></li>
-                  <li><a href="#" id=""><i class="fa fa-pencil"></i>Edit</a></li>
-                </ul>
-              </div> -->
-              <!-- <div class="pull-right">
-                <button type="button" class="btn btn-default btn-xs"><i class="fa fa-plus"></i></button>
-                <button type="button" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
-              </div> -->
-            </div>
-            <div class="box-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txt_namaPegawai">NIS</label>
-                    <input readonly type="text" class="form-control" id="nis" name="nis" placeholder="NIS" value="<?php echo $siswa->nis ?>">
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-6">
-                      <label for="txt_namaPegawai">NISN</label>
-                      <input readonly type="text" minlength="10" maxlength="10" class="form-control number" id="nisn" name="nisn" value="<?php echo $siswa->nisn ?>">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="txt_namaPegawai">No. Telepon</label>
-                      <input readonly type="text" class="form-control number" minlength="11" maxlength="13" id="hp" name="hp" value="<?php echo $siswa->no_tlp ?>">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="txt_namaPegawai">Kelas</label>
-                      <input readonly type="text" class="form-control number" minlength="11" maxlength="13" id="hp" name="hp" value="<?php echo $siswa->nama_kelas ?>">
-                    </div>
-                     <div class="form-group col-md-6">
-                      <label for="txt_namaPegawai">Tahun Spp</label>
-                      <input readonly type="text" class="form-control number" minlength="11" maxlength="13" id="hp" name="hp" value="<?php echo $siswa->tahun ?>">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="txt_namaPegawai">Nama</label>
-                    <input readonly type="text" class="form-control" id="nama" name="nama" value="<?php echo $siswa->nama ?>">
-                  </div>
-                  <div class="form-group">
-                    <label for="txt_namaPegawai">Alamat</label>
-                    <input readonly type="text" class="form-control" id="alamat" name="alamat" value="<?php echo $siswa->alamat ?>">
-                  </div>
-                   <div class="form-group">
-                    <label for="txt_namaPegawai">Tanggal Lahir</label>
-                    <input readonly type="text" class="form-control" id="tgllhr" name="tgllhr" value="<?php echo $siswa->tgl_lahir ?>">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-      <?php } ?>
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 1.0.00
-    </div>
-    <strong>Copyright &copy; 2020 Zharvi Achmadha.</strong> All rights
-    reserved.
-  </footer>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark" style="display: none;">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+     <!--====== Section 11 ======-->
+     <div class="u-s-p-b-90 u-s-m-b-30">
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+         <!--====== Section Intro ======-->
+         <div class="section__intro u-s-m-b-46">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="section__text-wrap">
+                             <h1 class="section__heading u-c-secondary u-s-m-b-12">Partner</h1>
 
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
+                             <!-- <span class="section__span u-c-silver">WHAT OUR CLIENTS SAY</span> -->
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!--====== End - Section Intro ======-->
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+         <div class="section__content">
+             <div class="container">
 
-                <p>New phone +1(800)555-1234</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                 <!--====== Brand Slider ======-->
+                 <div class="slider-fouc">
+                     <div class="owl-carousel" id="brand-slider" data-item="5">
+                         <div class="brand-slide">
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                             <a href="shop-side-version-2.html">
 
-                <p>nora@example.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+                                 <img src="<?php echo base_url(); ?>assets/client/images/brand/b1.png" alt=""></a>
+                         </div>
+                         <div class="brand-slide">
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                             <a href="shop-side-version-2.html">
 
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
+                                 <img src="<?php echo base_url(); ?>assets/client/images/brand/b2.png" alt=""></a>
+                         </div>
+                         <div class="brand-slide">
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
+                             <a href="shop-side-version-2.html">
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
+                                 <img src="<?php echo base_url(); ?>assets/client/images/brand/b3.png" alt=""></a>
+                         </div>
+                         <div class="brand-slide">
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
+                             <a href="shop-side-version-2.html">
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
+                                 <img src="<?php echo base_url(); ?>assets/client/images/brand/b4.png" alt=""></a>
+                         </div>
+                         <div class="brand-slide">
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
+                             <a href="shop-side-version-2.html">
 
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
+                                 <img src="<?php echo base_url(); ?>assets/client/images/brand/b5.png" alt=""></a>
+                         </div>
+                         <div class="brand-slide">
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
+                             <a href="shop-side-version-2.html">
 
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
+                                 <img src="<?php echo base_url(); ?>assets/client/images/brand/b6.png" alt=""></a>
+                         </div>
+                     </div>
+                 </div>
+                 <!--====== End - Brand Slider ======-->
+             </div>
+         </div>
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Allow mail redirect
-              <input type="checkbox" class="pull-right" checked>
-            </label>
+         <!--====== End - Section Content ======-->
+     </div>
+     <!--====== End - Section 11 ======-->
 
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Expose author name in posts
-              <input type="checkbox" class="pull-right" checked>
-            </label>
 
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
+ </div>
+ <!--====== End - App Content ======-->
 
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Show me as online
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-          </div>
-          <!-- /.form-group -->
+ <!--====== Main Footer ======-->
+ <footer>
+     <div class="outer-footer">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-4 col-md-6">
+                     <div class="outer-footer__content u-s-m-b-40">
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Turn off notifications
-              <input type="checkbox" class="pull-right">
-            </label>
-          </div>
-          <!-- /.form-group -->
+                         <span class="outer-footer__content-title">Contact Us</span>
+                         <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Delete chat history
-              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
+                             <span>4247 Ashford Drive Virginia VA-20006 USA</span>
+                         </div>
+                         <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
 
-<!-- jQuery 3 -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
-<!-- Bootstrap 3.3.7 -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/raphael/raphael.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/template/bower_components/morris.js/morris.min.js"></script>
-<!-- Sparkline -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="<?php echo base_url(); ?>assets/template/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/template/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/moment/min/moment.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/template/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- datepicker -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- Datatable -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/template/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="<?php echo base_url(); ?>assets/template/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="<?php echo base_url(); ?>assets/template/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="<?php echo base_url(); ?>assets/template/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url(); ?>assets/template/dist/js/demo.js"></script>
-<?php
-		if($this->session->userdata('role')=='Admin' || $this->session->userdata('role')=='Petugas'){
-?>
+                             <span>(+0) 900 901 904</span>
+                         </div>
+                         <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
+
+                             <span>contact@domain.com</span>
+                         </div>
+                         <div class="outer-footer__social">
+                             <ul>
+                                 <li>
+
+                                     <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a>
+                                 </li>
+                                 <li>
+
+                                     <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
+                                 </li>
+                                 <li>
+
+                                     <a class="s-youtube--color-hover" href="#"><i class="fab fa-youtube"></i></a>
+                                 </li>
+                                 <li>
+
+                                     <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a>
+                                 </li>
+                                 <li>
+
+                                     <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a>
+                                 </li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6">
+                     <div class="row">
+                         <div class="col-lg-6 col-md-6">
+                             <div class="outer-footer__content u-s-m-b-40">
+
+                                 <span class="outer-footer__content-title">Information</span>
+                                 <div class="outer-footer__list-wrap">
+                                     <ul>
+                                         <li>
+
+                                             <a href="cart.html">Cart</a>
+                                         </li>
+                                         <li>
+
+                                             <a href="dashboard.html">Account</a>
+                                         </li>
+                                         <li>
+
+                                             <a href="shop-side-version-2.html">Manufacturer</a>
+                                         </li>
+                                         <li>
+
+                                             <a href="dash-payment-option.html">Finance</a>
+                                         </li>
+                                         <li>
+
+                                             <a href="shop-side-version-2.html">Shop</a>
+                                         </li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-lg-6 col-md-6">
+                             <div class="outer-footer__content u-s-m-b-40">
+                                 <div class="outer-footer__list-wrap">
+
+                                     <span class="outer-footer__content-title">Our Company</span>
+                                     <ul>
+                                         <li>
+
+                                             <a href="about.html">About us</a>
+                                         </li>
+                                         <li>
+
+                                             <a href="contact.html">Contact Us</a>
+                                         </li>
+                                         <li>
+
+                                             <a href="index.html">Sitemap</a>
+                                         </li>
+                                         <li>
+
+                                             <a href="dash-my-order.html">Delivery</a>
+                                         </li>
+                                         <li>
+
+                                             <a href="shop-side-version-2.html">Store</a>
+                                         </li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-4 col-md-12">
+                     <div class="outer-footer__content">
+
+                         <span class="outer-footer__content-title">Join our Newsletter</span>
+                         <form class="newsletter">
+                             <div class="u-s-m-b-15">
+                                 <div class="radio-box newsletter__radio">
+
+                                     <input type="radio" id="male" name="gender">
+                                     <div class="radio-box__state radio-box__state--primary">
+
+                                         <label class="radio-box__label" for="male">Male</label>
+                                     </div>
+                                 </div>
+                                 <div class="radio-box newsletter__radio">
+
+                                     <input type="radio" id="female" name="gender">
+                                     <div class="radio-box__state radio-box__state--primary">
+
+                                         <label class="radio-box__label" for="female">Female</label>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="newsletter__group">
+
+                                 <label for="newsletter"></label>
+
+                                 <input class="input-text input-text--only-white" type="text" id="newsletter" placeholder="Enter your Email">
+
+                                 <button class="btn btn--e-brand newsletter__btn" type="submit">SUBSCRIBE</button>
+                             </div>
+
+                             <span class="newsletter__text">Subscribe to the mailing list to receive updates on
+                                 promotions, new arrivals, discount and coupons.</span>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="lower-footer">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12">
+                     <div class="lower-footer__content">
+                         <div class="lower-footer__copyright">
+
+                             <span>Copyright © 2018</span>
+
+                             <a href="index.html">Reshop</a>
+
+                             <span>All Right Reserved</span>
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </footer>
+
+ <!--====== Modal Section ======-->
+
+
+
+
+ <!--====== Newsletter Subscribe Modal ======-->
+ <div class="modal fade new-l" id="newsletter-modal">
+     <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content modal--shadow">
+
+             <button class="btn new-l__dismiss fas fa-times" type="button" data-dismiss="modal"></button>
+             <div class="modal-body">
+                 <div class="row u-s-m-x-0">
+                     <div class="col-lg-6 new-l__col-1 u-s-p-x-0">
+
+                         <a class="new-l__img-wrap u-d-block" href="shop-side-version-2.html">
+
+                             <img class="u-img-fluid u-d-block" src="<?php echo base_url(); ?>assets/client/images/newsletter/newsletter.jpg" alt=""></a>
+                     </div>
+                     <div class="col-lg-6 new-l__col-2">
+                         <div class="new-l__section u-s-m-t-30">
+                             <div class="u-s-m-b-8 new-l--center">
+                                 <h3 class="new-l__h3">Newsletter</h3>
+                             </div>
+                             <div class="u-s-m-b-30 new-l--center">
+                                 <p class="new-l__p1">Sign up for emails to get the scoop on new arrivals,
+                                     special sales and more.</p>
+                             </div>
+                             <form class="new-l__form">
+                                 <div class="u-s-m-b-15">
+
+                                     <input class="news-l__input" type="text" placeholder="E-mail Address">
+                                 </div>
+                                 <div class="u-s-m-b-15">
+
+                                     <button class="btn btn--e-brand-b-2" type="submit">Sign up!</button>
+                                 </div>
+                             </form>
+                             <div class="u-s-m-b-15 new-l--center">
+                                 <p class="new-l__p2">By Signing up, you agree to receive Reshop
+                                     offers,<br />promotions and other commercial messages. You may unsubscribe
+                                     at any time.</p>
+                             </div>
+                             <div class="u-s-m-b-15 new-l--center">
+
+                                 <a class="new-l__link" data-dismiss="modal">No Thanks</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!--====== End - Newsletter Subscribe Modal ======-->
+ <!--====== End - Modal Section ======-->
+ </div>
+ <!--====== End - Main App ======-->
+
+
+ <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
  <script>
+     window.ga = function() {
+         ga.q.push(arguments)
+     };
+     ga.q = [];
+     ga.l = +new Date;
+     ga('create', 'UA-XXXXX-Y', 'auto');
+     ga('send', 'pageview')
+ </script>
+ <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
-    $(function () {
+ <!--====== Vendor Js ======-->
+ <script src="<?php echo base_url(); ?>assets/client/js/vendor.js"></script>
 
-      
+ <!--====== jQuery Shopnav plugin ======-->
+ <script src="<?php echo base_url(); ?>assets/client/js/jquery.shopnav.js"></script>
 
-      $('.sidebar-menu').tree()
+ <!--====== App ======-->
+ <script src="<?php echo base_url(); ?>assets/client/js/app.js"></script>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+ <script>
+     $(function() {
+         var availableTags = [
+             "ActionScript",
+             "AppleScript",
+             "Asp",
+             "BASIC",
+             "C",
+             "C++",
+             "Clojure",
+             "COBOL",
+             "ColdFusion",
+             "Erlang",
+             "Fortran",
+             "Groovy",
+             "Haskell",
+             "Java",
+             "JavaScript",
+             "Lisp",
+             "Perl",
+             "PHP",
+             "Python",
+             "Ruby",
+             "Scala",
+             "Scheme"
+         ];
 
-      $.fn.dataTableExt.oApi.fnPagingInfo = function(oSettings) {
-        return {
-          "iStart": oSettings._iDisplayStart,
-          "iEnd": oSettings.fnDisplayEnd(),
-          "iLength": oSettings._iDisplayLength,
-          "iTotal": oSettings.fnRecordsTotal(),
-          "iFilteredTotal": oSettings.fnRecordsDisplay(),
-          "iPage": Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength),
-          "iTotalPages": Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)
-        };
-      };
+         $("#main-search").autocomplete({
+             source: availableTags
+         });
+     });
+ </script>
 
-      var table = $("#tabel").DataTable({
-            initComplete: function() {
-                var api = this.api();
-                $('#mytable_filter input')
-                    .off('.DT')
-                    .on('input.DT', function() {
-                        api.search(this.value).draw();
-                    });
-            },
-            oLanguage: {
-                sProcessing: '<p style="color: green"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i></p><span class="sr-only">Loading…</span>'
-            },
-            search: {
-                "caseInsensitive": false
-            },
-            responsive: true,
-            autoWidth: false,
-            pageLength: 100,
-            processing: true,
-            serverSide: true,
-            ajax: {
-                "url": "<?php echo base_url() . 'Home/today' ?>",
-                "type": "POST",
-            },
-            columns: [{
-                    "data": "tgl_bayar"
-                },
-                {
-                    "data": "no_pembayaran"
-                },
-                {
-                    "data": "nis"
-                },
-                {
-                    "data": "nama"
-                },
-                {
-                    "data": "total"
-                },
-                {
-                    "data": "nama_petugas"
-                },
-                {
-                    "data": "view"
-                }
-            ],
-            order: [
-                [0, 'desc']
-            ],
-            rowCallback: function(row, data, iDisplayIndex) {
-                var info = this.fnPagingInfo();
-                var page = info.iPage;
-                var length = info.iLength;
-                $('td:eq(0)', row).html();
-            }
+ <!--====== Noscript ======-->
+ <noscript>
+     <div class="app-setting">
+         <div class="container">
+             <div class="row">
+                 <div class="col-12">
+                     <div class="app-setting__wrap">
+                         <h1 class="app-setting__h1">JavaScript is disabled in your browser.</h1>
 
-      });
+                         <span class="app-setting__text">Please enable JavaScript in your browser or upgrade to a
+                             JavaScript-capable browser.</span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </noscript>
+ </body>
 
-      $('#tabel tbody').on('click', '.hapus', function() {
-		    var id = $(this).data('id');
-            window.location.href = '<?php echo base_url(); ?>Pembayaran/invoice?param=' + id ;
-      });
-
-       
-
-    })
-
-</script>
-<?php
-		}else{
-?>
-  <script>
-    $(document).ready(function () {
-      $('.sidebar-menu').tree()
-    })
-
-  </script>
-<?php
-		}
-?>
-</body>
-</html>
+ </html>

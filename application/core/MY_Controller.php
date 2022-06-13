@@ -119,19 +119,4 @@ class MY_Controller extends CI_Controller
       );
       return in_array($ruriString, $ruriArray);
    }
-
-   function reset_flash_data()
-   {
-      $this->session->set_flashdata('message', '');
-   }
-   /* Save current opened sidebar menu */
-   function sidebar($menu_id = 'null')
-   {
-      if (empty($menu_id))
-         $this->session->unset_userdata('sidebar_menu');
-      else if ($menu_id === 'null')
-         $this->session->unset_userdata('sidebar_menu');
-      else
-         $this->session->set_userdata('sidebar_menu', $menu_id);
-   }
 }
