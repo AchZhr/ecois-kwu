@@ -21,7 +21,7 @@ class Auth
 	/** @var object The logged-in user. */
 	private $user;
 
-	protected $user_table = 'petugas'; // Table name
+	protected $user_table = 'mahasiswa'; // Table name
 
 	public function __construct()
 	{
@@ -45,142 +45,78 @@ class Auth
 		}
 		$this->user = false;
 
-		$namauser = $this->CI->session->userdata('namauser');
-		if (empty($namauser)) {
+		$npm = $this->CI->session->userdata('npm');
+		if (empty($npm)) {
 			return false;
 		} else {
-			if(is_numeric($namauser)){
-				//Check against user table
-				$this->CI->db->select('*');
-				$this->CI->db->where('nis', $this->CI->session->userdata('namauser'));
-				$query = $this->CI->db->get_where('siswa');
+			//Check against user table
+			$this->CI->db->select('*');
+			$this->CI->db->where('npm', $this->CI->session->userdata('npm'));
+			$query = $this->CI->db->get_where('mahasiswa');
 
-				if ($query->num_rows() > 0) {
-					$this->user = $query->row();
-					$this->user->nisn = $this->user->nisn;
-					return $this->user;
-				} else {
-					return false;
-				}
-			}else{
-					//Check against user table
-					$this->CI->db->select('*');
-					$this->CI->db->where('username', $this->CI->session->userdata('namauser'));
-					$query = $this->CI->db->get_where($this->user_table);
-
-					if ($query->num_rows() > 0) {
-						$this->user = $query->row();
-						$this->user->username = $this->user->username;
-						return $this->user;
-					} else {
-						return false;
-					}
+			if ($query->num_rows() > 0) {
+				$this->user = $query->row();
+				$this->user->npm = $this->user->npm;
+				return $this->user;
+			} else {
+				return false;
 			}
 		}
 	}
 
 
 
-	function login($loginname = '', $password = '',$sebagai='')
+	function login($loginname = '', $password = '')
 	{
 		if ($loginname == '' or $password == '')
 			return false;
 
 		//Check if already logged in
-		if ($this->CI->session->userdata('namauser') == $loginname || $this->CI->session->userdata('userid') == $loginname) {
+		if ($this->CI->session->userdata('npm') == $loginname || $this->CI->session->userdata('userid') == $loginname) {
 			return true;
 		}
 
-		if($sebagai=='S'){
-			//Check against user table
-			$this->CI->db->select('*');
-			$this->CI->db->from('siswa');
-			$this->CI->db->where('nis', $loginname);
-			$query = $this->CI->db->get();
+		//Check against user table
+		$this->CI->db->select('*');
+		$this->CI->db->from($this->user_table);
+		$this->CI->db->where('npm', $loginname);
+		$query = $this->CI->db->get();
 
-			if ($query->num_rows() > 0) {
-				$result = $query->row_array();
+		if ($query->num_rows() > 0) {
+			$result = $query->row_array();
 
-				$cleanPass = trim($result['pin']);
+			$hasher = new PasswordHash(PHPASS_HASH_STRENGTH, PHPASS_HASH_PORTABLE);
+			$cleanPass = trim($result['password']);
 
-				if ($password != $cleanPass) {
-
-					return false;
-				}
-
-
-				//Create a fresh, brand new session
-				if (CI_VERSION >= '3.0') {
-					$this->CI->session->sess_regenerate(TRUE);
-				} else {
-					//Destroy old session
-					$this->CI->session->sess_destroy();
-					$this->CI->session->sess_create();
-				}
-
-
-				$this->CI->session->set_userdata(
-					array(
-						'userid'   => $result['nis'],
-						'namauser'   => $result['nis'],
-						'logged_in'   => true,
-						'role'   => 'siswa',
-						'nama'   => $result['nama']
-
-					)
-				);
-
-				return true;
-			} else {
-
+			if (!$hasher->CheckPassword($password, $cleanPass)) {
 				return false;
 			}
-		}else if($sebagai='P'){
-			//Check against user table
-			$this->CI->db->select('*');
-			$this->CI->db->from($this->user_table);
-			$this->CI->db->where('username', $loginname);
-			$query = $this->CI->db->get();
-
-			if ($query->num_rows() > 0) {
-				$result = $query->row_array();
-
-				$hasher = new PasswordHash(PHPASS_HASH_STRENGTH, PHPASS_HASH_PORTABLE);
-				$cleanPass = trim($result['password']);
-
-				if (!$hasher->CheckPassword($password, $cleanPass)) {
-
-					return false;
-				}
 
 
-				//Create a fresh, brand new session
-				if (CI_VERSION >= '3.0') {
-					$this->CI->session->sess_regenerate(TRUE);
-				} else {
-					//Destroy old session
-					$this->CI->session->sess_destroy();
-					$this->CI->session->sess_create();
-				}
-
-
-				$this->CI->session->set_userdata(
-					array(
-						'userid'   => $result['id_petugas'],
-						'namauser'   => $result['username'],
-						'logged_in'   => true,
-						'role'   => $result['level'],
-						'nama'   => $result['nama_petugas']
-
-					)
-				);
-
-				return true;
+			//Create a fresh, brand new session
+			if (CI_VERSION >= '3.0') {
+				$this->CI->session->sess_regenerate(TRUE);
 			} else {
-
-				return false;
+				//Destroy old session
+				$this->CI->session->sess_destroy();
+				$this->CI->session->sess_create();
 			}
-		}else{
+
+
+			$this->CI->session->set_userdata(
+				array(
+					'npm'   => $result['npm'],
+					'nama'   => $result['nama'],
+					'seller'   => $result['seller'],
+					'status_akun'   => $result['jurusan'],
+					'logged_in'   => true,
+
+				)
+			);
+
+			return true;
+		} else {
+
 			return false;
 		}
 	}

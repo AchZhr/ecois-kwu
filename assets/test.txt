@@ -2,10 +2,8 @@ mahasiswa :
 npm
 nama
 gender
-tgl_lhr
 jurusan
 alamat sekarang
-angkatan
 passorword
 seller
 status_akun

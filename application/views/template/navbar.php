@@ -9,7 +9,7 @@
              <div class="primary-nav">
 
                  <!--====== Main Logo ======-->
-                 <a class="main-logo" href="index.html">
+                 <a class="main-logo" href="<?= base_url('Home'); ?>">
 
                      <h2 style="color: black;">Ecois</h2>
                      <!-- <img src="images/logo/logo-1.png" alt=""> -->
@@ -44,7 +44,7 @@
 
                              <li>
 
-                                 <a href="index.html"><i class="fas fa-home u-c-brand"></i></a>
+                                 <a href="<?= base_url('Home') ?>"><i class="fas fa-home u-c-brand"></i></a>
                              </li>
 
 
@@ -60,31 +60,50 @@
                                  <!--====== Dropdown ======-->
 
                                  <span class="js-menu-toggle"></span>
-                                 <ul style="width:120px">
-                                     <li>
+                                 <ul style="width:120px;">
+                                     <?php
+                                        if ($this->session->userdata('logged_in')) {
 
-                                         <a href="dashboard.html"><i class="fas fa-user-circle u-s-m-r-6"></i>
 
-                                             <span>Account</span></a>
-                                     </li>
-                                     <li>
+                                        ?>
+                                         <li>
 
-                                         <a href="signup.html"><i class="fas fa-user-plus u-s-m-r-6"></i>
+                                             <a href="<?= base_url('User') ?>"><i class="fas fa-user-circle u-s-m-r-6"></i>
 
-                                             <span>Signup</span></a>
-                                     </li>
-                                     <li>
+                                                 <span>Akun</span></a>
+                                         </li>
 
-                                         <a href="signin.html"><i class="fas fa-lock u-s-m-r-6"></i>
+                                         <li>
 
-                                             <span>Signin</span></a>
-                                     </li>
-                                     <li>
+                                             <a href="<?= base_url('front/logout') ?>"><i class="fas fa-lock-open u-s-m-r-6"></i>
 
-                                         <a href="signup.html"><i class="fas fa-lock-open u-s-m-r-6"></i>
+                                                 <span>Keluar</span></a>
+                                         </li>
 
-                                             <span>Signout</span></a>
-                                     </li>
+                                     <?php
+                                        } else {
+
+
+                                        ?>
+                                         <li>
+
+                                             <a href="<?= base_url('front/login'); ?>"><i class="fas fa-user-plus u-s-m-r-6"></i>
+
+                                                 <span>Masuk</span></a>
+                                         </li>
+                                         <li>
+
+                                             <a href="<?= base_url('Home/registrasi'); ?>"><i class="fas fa-lock u-s-m-r-6"></i>
+
+                                                 <span>Daftar</span></a>
+                                         </li>
+                                     <?php
+
+                                        }
+                                        ?>
+
+
+
 
 
                                  </ul>

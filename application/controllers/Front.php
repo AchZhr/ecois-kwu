@@ -20,27 +20,33 @@ class Front extends Front_Controller
 			redirect($this->previous_page);
 		}
 
-		$this->data['pagetitle']  = 'Login Page';
 		$this->data['view']       = 'login';
-		$this->data['pageid']     = 'login-page';
+		$this->data['param']       = '';
 
-		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('npm', 'NPM', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 
 		if ($this->form_validation->run() == TRUE) {
-			$username = $this->input->post('username');
+			$username = $this->input->post('npm');
 			$password = $this->input->post('password');
-			$type = $this->input->post('tipe');
 
 
-			if ($this->auth->login($username, $password,$type)) {
+			if ($this->auth->login($username, $password)) {
 				redirect($this->requested_page);
 			} else {
-				$this->load->view('simple', $this->data);
+				$this->load->view('template/default', $this->data);
 			}
 		} else {
-			$this->load->view('simple', $this->data);
+			if ($this->auth->is_logged_in()) {
+
+				$this->data['view']       = 'home';
+				$this->data['param']       = '';
+				$this->load->view('template/default', $this->data);
+			} else {
+
+				$this->load->view('template/default', $this->data);
+			}
 		}
 	}
 
@@ -49,6 +55,6 @@ class Front extends Front_Controller
 	function logout()
 	{
 		$this->auth->logout();
-		$this->login();
+		redirect('Home');
 	}
 }
