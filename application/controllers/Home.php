@@ -8,7 +8,7 @@ class Home extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('datatables');
-		$this->load->model('home_model');
+		$this->load->model('produk_model');
 		$this->load->model('mahasiswa_model');
 	}
 
@@ -16,7 +16,7 @@ class Home extends CI_Controller
 	{
 
 		$this->data['view']    = 'home';
-		$this->data['param']    = $this->home_model->getTopProduct();
+		$this->data['param']    = $this->produk_model->getTopProduct();
 		$this->load->view('template/default', $this->data);
 	}
 

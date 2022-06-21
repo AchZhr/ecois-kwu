@@ -21,7 +21,7 @@
                                     <span class="content-span-3 u-c-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam velit</span>
 
 
-                                    <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">Belanja Sekarang!</a>
+                                    <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog') ?>">Belanja Sekarang!</a>
                                 </div>
                             </div>
                         <?php } else {
@@ -56,7 +56,7 @@
                                 <span class="content-span-3 u-c-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam velit</span>
 
 
-                                <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">Belanja Sekarang!</a>
+                                <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog') ?>">Belanja Sekarang!</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
 
 
 
-                                <a class="shop-now-link btn--e-brand" href="shop-side-version-2.html">Belanja Sekarang!</a>
+                                <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog') ?>">Belanja Sekarang!</a>
                             </div>
                         </div>
                     </div>
@@ -165,9 +165,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section__text-wrap">
-                            <h1 class="section__heading u-c-secondary u-s-m-b-12">TOP TRENDING</h1>
+                            <h1 class="section__heading u-c-secondary u-s-m-b-12">Produk Terlaris</h1>
 
-                            <span class="section__span u-c-silver">CHOOSE CATEGORY</span>
+                            <span class="section__span u-c-silver">Pilih Kategori</span>
                         </div>
                     </div>
                 </div>
@@ -184,24 +184,21 @@
                         <div class="filter-category-container">
                             <div class="filter__category-wrapper">
 
-                                <button class="btn filter__btn filter__btn--style-1 js-checked" type="button" data-filter="*">ALL</button>
+                                <button class="btn filter__btn filter__btn--style-1 js-checked" type="button" data-filter="*">Semua</button>
                             </div>
                             <div class="filter__category-wrapper">
 
-                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".headphone">HEADPHONES</button>
+                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".makanan">Makanan</button>
                             </div>
                             <div class="filter__category-wrapper">
 
-                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".smartphone">SMARTPHONES</button>
+                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".barang">Barang</button>
                             </div>
                             <div class="filter__category-wrapper">
 
-                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".sportgadget">SPORT GADGETS</button>
+                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".lain">Lain-Lain</button>
                             </div>
-                            <div class="filter__category-wrapper">
 
-                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".dslr">DSLR</button>
-                            </div>
                         </div>
                         <div class="filter__grid-wrapper u-s-m-t-30">
                             <div class="row">
@@ -211,7 +208,7 @@
 
                                 ?>
 
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item barang">
                                         <div class="product-o product-o--hover-on product-o--radius">
                                             <div class="product-o__wrap">
 
@@ -246,12 +243,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="load-more">
 
-                            <button class="btn btn--e-brand" type="button">Load More</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -635,15 +627,7 @@ if (!$this->session->userdata('logged_in')) {
 
 
 <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
-<script>
-    window.ga = function() {
-        ga.q.push(arguments)
-    };
-    ga.q = [];
-    ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('send', 'pageview')
-</script>
+
 <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
 <!--====== Vendor Js ======-->

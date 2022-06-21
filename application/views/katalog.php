@@ -1,124 +1,145 @@
+ <!--====== App Content ======-->
  <div class="app-content">
 
      <!--====== Section 1 ======-->
      <div class="u-s-p-y-30">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12">
+                     <div class="shop-p">
+                         <div class="shop-p__toolbar u-s-m-b-30">
+                             <!-- <div class="shop-p__meta-wrap u-s-m-b-30">
 
+                                 <span class="shop-p__meta-text-1">FOUND 18 RESULTS</span>
 
-     </div>
-     <!--====== End - Section 1 ======-->
+                             </div> -->
+                             <div class="shop-p__tool-style">
+                                 <div class="tool-style__group u-s-m-b-8">
 
+                                     <span class="js-shop-grid-target is-active">Grid</span>
 
-     <!--====== Section 2 ======-->
-     <div class="u-s-p-b-30">
-
-         <!--====== Section Intro ======-->
-         <div class="section__intro u-s-m-b-30">
-             <div class="container">
-                 <div class="row">
-                     <div class="col-lg-12">
-                         <div class="section__text-wrap">
-                             <h1 class="section__heading u-c-secondary">Rigistrasi</h1>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <!--====== End - Section Intro ======-->
-
-
-         <!--====== Section Content ======-->
-         <div class="section__content">
-             <div class="container">
-                 <div class="row row--center">
-                     <div class="col-lg-6 col-md-8 u-s-m-b-30">
-                         <div class="l-f-o">
-                             <div class="l-f-o__pad-box">
-                                 <form class="l-f-o__form" method="POST" action="<?= base_url('Home/regist') ?>">
-
-                                     <div class="u-s-m-b-30">
-
-                                         <label class="gl-label" for="reg-fname">NPM *</label>
-
-                                         <input name="npm" class="input-text input-text--primary-style" type="text" id="reg-fname" placeholder="NPM" required>
+                                     <span class="js-shop-list-target">List</span>
+                                 </div>
+                                 <form>
+                                     <div class="tool-style__form-wrap">
+                                         <div class="u-s-m-b-8"><select class="select-box select-box--transparent-b-2">
+                                                 <option>Show: 8</option>
+                                                 <option selected>Show: 12</option>
+                                                 <option>Show: 16</option>
+                                                 <option>Show: 28</option>
+                                             </select></div>
+                                         <div class="u-s-m-b-8"><select class="select-box select-box--transparent-b-2">
+                                                 <option selected>Sort BY: Produk Terbaru</option>
+                                                 <option>Sort BY: Terlaris </option>
+                                                 <option>Sort BY: Ulasan Terbaik</option>
+                                                 <option>Sort BY: Harga Terendah</option>
+                                                 <option>Sort BY: Harga Tertinggi</option>
+                                             </select></div>
                                      </div>
-                                     <div class="u-s-m-b-30">
-
-                                         <label class="gl-label" for="reg-lname">NAMA *</label>
-
-                                         <input name="nama" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="Nama" required>
-                                     </div>
-                                     <div class="gl-inline">
-
-                                         <div class="u-s-m-b-30">
-
-                                             <label class="gl-label" for="gender">GENDER *</label><select name="jk" required class="select-box select-box--primary-style u-w-100" id="gender">
-                                                 <option selected disabled>Pilih</option>
-                                                 <option value="L">Laki-Laki</option>
-                                                 <option value="P">Perempuan</option>
-                                             </select>
-                                         </div>
-                                         <div class="u-s-m-b-30">
-
-                                             <!--====== Date of Birth Select-Box ======-->
-
-                                             <span class="gl-label">Jurusan *</span>
-                                             <div class="gl-dob">
-                                                 <select name="jurusan" required class="select-box select-box--primary-style" id="jur">
-                                                     <option selected disabled>Pilih</option>
-                                                     <option value="Sistem Informasi">Sistem Informasi</option>
-                                                     <option value="Informatika">Informatika</option>
-                                                     <option value="Data Sience">Data Sience</option>
-                                                 </select>
-
-                                             </div>
-                                             <!--====== End - Date of Birth Select-Box ======-->
-                                         </div>
-                                     </div>
-                                     <div class="gl-inline">
-
-                                         <div class="u-s-m-b-30">
-
-                                             <label class="gl-label" for="reg-email">E-MAIL *</label>
-
-                                             <input name="email" required class="input-text input-text--primary-style" type="email" id="reg-email" placeholder="E-mail">
-                                         </div>
-                                         <div class="u-s-m-b-30">
-
-                                             <label class="gl-label" for="reg-email">No HP *</label>
-
-                                             <input name="hp" required class="input-text input-text--primary-style" type="text" id="reg-email" placeholder="No HP">
-                                         </div>
-                                     </div>
-                                     <div class="u-s-m-b-30">
-
-                                         <label class="gl-label" for="reg-password">Alamat *</label>
-
-                                         <textarea name="alamat" required class="text-area text-area--primary-style" placeholder="Alamat" style="width: 100% ;" id="reg-alamat"></textarea>
-                                     </div>
-                                     <div class="u-s-m-b-30">
-
-                                         <label class="gl-label" for="reg-password">PASSWORD *</label>
-
-                                         <input name="pass" required class="input-text input-text--primary-style" type="password" id="reg-password" placeholder="Password">
-                                     </div>
-                                     <div class="u-s-m-b-15">
-
-                                         <button class="shop-now-link btn--e-brand" style="width:100% ;font-size:large" type="submit">Submit</button>
-                                     </div>
-                                     <center>
-                                         <a class="gl-link" href="<?= base_url('Home') ?>">Kembali</a>
-
-                                     </center>
                                  </form>
                              </div>
                          </div>
+                         <div class="shop-p__collection">
+                             <div class="row is-grid-active">
+                                 <?php
+                                    foreach ($param as $produk) {
+                                    ?>
+                                     <div class="col-lg-3 col-md-4 col-sm-6">
+                                         <div class="product-m">
+                                             <div class="product-m__thumb">
+
+                                                 <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                     <img class="aspect__img" src="<?php echo base_url(); ?>assets/client/<?= json_decode($produk->image)->foto[0] ?>" alt=""></a>
+
+                                             </div>
+                                             <div class="product-m__content">
+                                                 <div class="product-m__category">
+
+                                                     <a href="shop-side-version-2.html"><?= $produk->kategori; ?></a>
+                                                 </div>
+                                                 <div class="product-m__name">
+
+                                                     <a href="product-detail.html"><?= $produk->nama_produk; ?></a>
+                                                 </div>
+                                                 <div class="product-m__rating gl-rating-style">
+                                                     <i class="fas fa-star"></i>
+                                                     <i class="fas fa-star"></i>
+                                                     <i class="fas fa-star-half-alt"></i>
+                                                     <i class="far fa-star"></i>
+                                                     <i class="far fa-star"></i>
+
+                                                     <span class="product-m__review">(23)</span>
+                                                 </div>
+                                                 <?php
+                                                    if ($produk->diskon != 0) {
+
+                                                    ?>
+                                                     <div class="product-m__price"><?= "Rp " . number_format($produk->harga_jual, 0, '', '.'); ?>
+
+                                                         <span class="product-m__discount"><?= "Rp " . number_format($produk->harga, 0, '', '.'); ?></span>
+                                                     </div>
+                                                 <?php
+                                                    } else {
+                                                    ?>
+                                                     <div class="product-m__price"><?= "Rp " . number_format($produk->harga_jual, 0, '', '.'); ?></div>
+
+                                                 <?php
+                                                    }
+                                                    ?>
+                                                 <span class="product-o__category" style="margin-top: 3px;font-size:10pt"><a href="#"><?= $produk->nama_toko; ?></a></span>
+
+                                                 <div class="product-m__hover">
+                                                     <div class="product-m__preview-description">
+
+                                                         <span><?= $produk->deskripsi; ?></span>
+                                                     </div>
+
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 <?php
+                                    }
+                                    ?>
+                             </div>
+                         </div>
+                         <div class="u-s-p-y-60">
+
+                             <!--====== Pagination ======-->
+                             <ul class="shop-p__pagination">
+                                 <?php
+                                    echo $this->pagination->create_links();
+                                    ?>
+                                 <!-- <li class="is-active">
+
+                                     <a href="shop-grid-full.html">1</a>
+                                 </li>
+                                 <li>
+
+                                     <a href="shop-grid-full.html">2</a>
+                                 </li>
+                                 <li>
+
+                                     <a href="shop-grid-full.html">3</a>
+                                 </li>
+                                 <li>
+
+                                     <a href="shop-grid-full.html">4</a>
+                                 </li>
+                                 <li>
+
+                                     <a class="fas fa-angle-right" href="shop-grid-full.html"></a>
+                                 </li> -->
+                             </ul>
+                             <!--====== End - Pagination ======-->
+                         </div>
                      </div>
                  </div>
              </div>
          </div>
-         <!--====== End - Section Content ======-->
      </div>
-     <!--====== End - Section 2 ======-->
+     <!--====== End - Section 1 ======-->
  </div>
  <!--====== End - App Content ======-->
 
@@ -266,8 +287,7 @@
                                  <button class="btn btn--e-brand newsletter__btn" type="submit">SUBSCRIBE</button>
                              </div>
 
-                             <span class="newsletter__text">Subscribe to the mailing list to receive updates on
-                                 promotions, new arrivals, discount and coupons.</span>
+                             <span class="newsletter__text">Subscribe to the mailing list to receive updates on promotions, new arrivals, discount and coupons.</span>
                          </form>
                      </div>
                  </div>
@@ -287,13 +307,40 @@
 
                              <span>All Right Reserved</span>
                          </div>
-
+                         <div class="lower-footer__payment">
+                             <ul>
+                                 <li><i class="fab fa-cc-stripe"></i></li>
+                                 <li><i class="fab fa-cc-paypal"></i></li>
+                                 <li><i class="fab fa-cc-mastercard"></i></li>
+                                 <li><i class="fab fa-cc-visa"></i></li>
+                                 <li><i class="fab fa-cc-discover"></i></li>
+                                 <li><i class="fab fa-cc-amex"></i></li>
+                             </ul>
+                         </div>
                      </div>
                  </div>
              </div>
          </div>
      </div>
  </footer>
+
+ <!--====== Side Filters ======-->
+
+ <!--====== End - Side Filters ======-->
+
+
+ <!--====== Modal Section ======-->
+
+
+ <!--====== Quick Look Modal ======-->
+
+ <!--====== End - Quick Look Modal ======-->
+
+
+ <!--====== Add to Cart Modal ======-->
+
+ <!--====== End - Add to Cart Modal ======-->
+ <!--====== End - Modal Section ======-->
  </div>
  <!--====== End - Main App ======-->
 
@@ -310,22 +357,13 @@
 
  <!--====== App ======-->
  <script src="<?php echo base_url(); ?>assets/client/js/app.js"></script>
-
  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
+ <!--====== Noscript ======-->
  <script>
      $(document).ready(function() {
-         $('form').submit(function(e) {
-             if ($('#gender').val() == null || $('#gender').val() == 'Pilih') {
-                 alert("Pilih Gender")
-                 e.preventDefault()
-             } else if ($('#jur').val() == null || $('#jur').val() == 'Pilih') {
-                 alert("Pilih Jurusan")
-                 e.preventDefault()
 
-             }
-         })
      })
  </script>
  </body>

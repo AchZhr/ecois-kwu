@@ -49,7 +49,7 @@
 
 
                              <li>
-                                 <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i></a>
+                                 <a href="<?= base_url('Katalog') ?>" class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i></a>
                              </li>
 
 
