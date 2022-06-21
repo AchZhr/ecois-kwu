@@ -87,7 +87,7 @@
                  <div class="col-lg-4 col-md-6">
                      <div class="outer-footer__content u-s-m-b-40">
 
-                         <span class="outer-footer__content-title">Contact Us</span>
+                         <span class="outer-footer__content-title">Kontak</span>
                          <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
 
                              <span>4247 Ashford Drive Virginia VA-20006 USA</span>
