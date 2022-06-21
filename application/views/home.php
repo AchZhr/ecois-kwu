@@ -392,46 +392,34 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="outer-footer__content u-s-m-b-40">
 
-                        <span class="outer-footer__content-title">Contact Us</span>
+                        <span class="outer-footer__content-title">Kontak Kami</span>
                         <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
 
-                            <span>4247 Ashford Drive Virginia VA-20006 USA</span>
+                            <span>Jl.Raya Rungkut Madya, Gunung Anyar, Surabaya</span>
                         </div>
                         <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
 
-                            <span>(+0) 900 901 904</span>
+                            <span>0878 1148 8302</span>
                         </div>
                         <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
 
-                            <span>contact@domain.com</span>
+                            <span>ecois.upnjatim@gmail.com</span>
                         </div>
-                        <div class="outer-footer__social">
+                        <!-- <div class="outer-footer__social">
                             <ul>
                                 <li>
 
-                                    <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a>
-                                </li>
-                                <li>
-
-                                    <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
-                                </li>
-                                <li>
-
-                                    <a class="s-youtube--color-hover" href="#"><i class="fab fa-youtube"></i></a>
+                                    <a class="s-tw--color-hover" href="#"><i class="fa-brands fa-tiktok"></i></a>
                                 </li>
                                 <li>
 
                                     <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a>
                                 </li>
-                                <li>
-
-                                    <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a>
-                                </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="outer-footer__content u-s-m-b-40">
@@ -494,8 +482,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-12">
                     <div class="outer-footer__content">
 
                         <span class="outer-footer__content-title">Join our Newsletter</span>
@@ -531,7 +519,7 @@
                                 promotions, new arrivals, discount and coupons.</span>
                         </form>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -542,9 +530,9 @@
                     <div class="lower-footer__content">
                         <div class="lower-footer__copyright">
 
-                            <span>Copyright © 2018</span>
+                            <span>Copyright © 2022</span>
 
-                            <a href="index.html">Reshop</a>
+                            <a href="index.html">ECOIS UPN JATIM</a>
 
                             <span>All Right Reserved</span>
                         </div>
