@@ -18,7 +18,7 @@
 
                                     <span class="content-span-2 u-c-white"><?= $this->session->userdata('nama') ?></span>
 
-                                    <span class="content-span-3 u-c-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam velit</span>
+                                    <span class="content-span-3 u-c-white">Di ECOIS UPN Veteran Jawa Timur</span>
 
 
                                     <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog') ?>">Belanja Sekarang!</a>
