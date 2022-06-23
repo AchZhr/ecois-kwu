@@ -18,7 +18,7 @@
 
   <!--====== Utility-Spacing ======-->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/client/css/utility.css">
-
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <!--====== App ======-->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/client/css/app.css">
   <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">

@@ -7,7 +7,7 @@ class produk_model extends Data_Model
     function __construct()
     {
         parent::__construct();
-        $this->table_name = 'vw_product';
+        $this->table_name = 'vw_produk';
         $this->pkey = 'id_produk';
     }
 
@@ -62,6 +62,7 @@ class produk_model extends Data_Model
     {
         $this->db->select('*');
         $this->db->from($this->table_name);
+        $this->db->limit(8);
         return $this->db->get()->result();
     }
 
@@ -88,7 +89,6 @@ class produk_model extends Data_Model
             $this->db->select('*');
             $this->db->from($this->table_name);
             $this->db->like('id_produk', $key);
-            $this->db->or_like('id_produk', $key);
             $this->db->or_like('nama_produk', $key);
             $this->db->or_like('kategori', $key);
             $this->db->or_like('deskripsi', $key);
@@ -97,5 +97,61 @@ class produk_model extends Data_Model
 
 
         return $this->db->get()->num_rows();
+    }
+
+    function getDataProduk($id)
+    {
+        $this->db->select('*');
+        $this->db->from($this->table_name);
+        $this->db->where($this->pkey, $id);
+
+        return $this->db->get()->row();
+    }
+
+    function getReviewProduct($id)
+    {
+        $this->db->select('*');
+        $this->db->from('vw_review');
+        $this->db->where($this->pkey, $id);
+        // $this->db->limit(5);
+        return $this->db->get()->result();
+    }
+
+    function getRating($id)
+    {
+        $this->db->select('AVG(rating) rating');
+        $this->db->from('rating');
+        $this->db->where($this->pkey, $id);
+
+        return round($this->db->get()->row()->rating);
+    }
+
+    function getDataAutoComplete($key)
+    {
+
+        $this->db->select('nama_produk');
+        $this->db->from($this->table_name);
+        $this->db->like('nama_produk', $key);
+        $this->db->or_like('kategori', $key);
+        $this->db->or_like('deskripsi', $key);
+        $this->db->or_like('nama_toko', $key);
+
+        return $this->db->get()->result();
+    }
+
+    function insertReview($_Data)
+    {
+        $dt = array(
+            'npm' => $this->session->userdata('npm'),
+            'id_produk' => $_Data['id_produk'],
+            'rating'      => $_Data['rating'],
+            'komentar'          => $_Data['komentar']
+        );
+
+        if ($this->db->insert('rating', $dt)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

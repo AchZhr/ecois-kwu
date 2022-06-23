@@ -20,7 +20,7 @@
 
                                      <span class="js-shop-list-target">List</span>
                                  </div>
-                                 <form>
+                                 <!-- <form>
                                      <div class="tool-style__form-wrap">
                                          <div class="u-s-m-b-8"><select class="select-box select-box--transparent-b-2">
                                                  <option>Show: 8</option>
@@ -36,7 +36,7 @@
                                                  <option>Sort BY: Harga Tertinggi</option>
                                              </select></div>
                                      </div>
-                                 </form>
+                                 </form> -->
                              </div>
                          </div>
                          <div class="shop-p__collection">
@@ -48,7 +48,7 @@
                                          <div class="product-m">
                                              <div class="product-m__thumb">
 
-                                                 <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                                                 <a class="aspect aspect--bg-grey aspect--square u-d-block" href="<?php echo base_url(); ?>Katalog/detail/<?= $produk->id_produk; ?>">
 
                                                      <img class="aspect__img" src="<?php echo base_url(); ?>assets/client/<?= json_decode($produk->image)->foto[0] ?>" alt=""></a>
 
@@ -60,7 +60,7 @@
                                                  </div>
                                                  <div class="product-m__name">
 
-                                                     <a href="product-detail.html"><?= $produk->nama_produk; ?></a>
+                                                     <a href="<?php echo base_url(); ?>Katalog/detail/<?= $produk->id_produk; ?>"><?= $produk->nama_produk; ?></a>
                                                  </div>
                                                  <div class="product-m__rating gl-rating-style">
                                                      <i class="fas fa-star"></i>
@@ -173,7 +173,7 @@
                                  </li>
                                  <li>
 
-                                     <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a>
+                                     <a class="s-tw--color-hover" href="#"><i class="fa fa-tiktok"></i></a>
                                  </li>
                                  <li>
 
@@ -190,138 +190,29 @@
                              </ul>
                          </div>
                      </div>
-                 </div>
-                 <div class="col-lg-4 col-md-6">
-                     <div class="row">
-                         <div class="col-lg-6 col-md-6">
-                             <div class="outer-footer__content u-s-m-b-40">
 
-                                 <span class="outer-footer__content-title">Information</span>
-                                 <div class="outer-footer__list-wrap">
-                                     <ul>
-                                         <li>
-
-                                             <a href="cart.html">Cart</a>
-                                         </li>
-                                         <li>
-
-                                             <a href="dashboard.html">Account</a>
-                                         </li>
-                                         <li>
-
-                                             <a href="shop-side-version-2.html">Manufacturer</a>
-                                         </li>
-                                         <li>
-
-                                             <a href="dash-payment-option.html">Finance</a>
-                                         </li>
-                                         <li>
-
-                                             <a href="shop-side-version-2.html">Shop</a>
-                                         </li>
-                                     </ul>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="col-lg-6 col-md-6">
-                             <div class="outer-footer__content u-s-m-b-40">
-                                 <div class="outer-footer__list-wrap">
-
-                                     <span class="outer-footer__content-title">Our Company</span>
-                                     <ul>
-                                         <li>
-
-                                             <a href="about.html">About us</a>
-                                         </li>
-                                         <li>
-
-                                             <a href="contact.html">Contact Us</a>
-                                         </li>
-                                         <li>
-
-                                             <a href="index.html">Sitemap</a>
-                                         </li>
-                                         <li>
-
-                                             <a href="dash-my-order.html">Delivery</a>
-                                         </li>
-                                         <li>
-
-                                             <a href="shop-side-version-2.html">Store</a>
-                                         </li>
-                                     </ul>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-4 col-md-12">
-                     <div class="outer-footer__content">
-
-                         <span class="outer-footer__content-title">Join our Newsletter</span>
-                         <form class="newsletter">
-                             <div class="u-s-m-b-15">
-                                 <div class="radio-box newsletter__radio">
-
-                                     <input type="radio" id="male" name="gender">
-                                     <div class="radio-box__state radio-box__state--primary">
-
-                                         <label class="radio-box__label" for="male">Male</label>
-                                     </div>
-                                 </div>
-                                 <div class="radio-box newsletter__radio">
-
-                                     <input type="radio" id="female" name="gender">
-                                     <div class="radio-box__state radio-box__state--primary">
-
-                                         <label class="radio-box__label" for="female">Female</label>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="newsletter__group">
-
-                                 <label for="newsletter"></label>
-
-                                 <input class="input-text input-text--only-white" type="text" id="newsletter" placeholder="Enter your Email">
-
-                                 <button class="btn btn--e-brand newsletter__btn" type="submit">SUBSCRIBE</button>
-                             </div>
-
-                             <span class="newsletter__text">Subscribe to the mailing list to receive updates on promotions, new arrivals, discount and coupons.</span>
-                         </form>
-                     </div>
                  </div>
              </div>
          </div>
-     </div>
-     <div class="lower-footer">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-12">
-                     <div class="lower-footer__content">
-                         <div class="lower-footer__copyright">
+         <div class="lower-footer">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="lower-footer__content">
+                             <div class="lower-footer__copyright">
 
-                             <span>Copyright © 2018</span>
+                                 <span>Copyright © 2018</span>
 
-                             <a href="index.html">Reshop</a>
+                                 <a href="index.html">Reshop</a>
 
-                             <span>All Right Reserved</span>
-                         </div>
-                         <div class="lower-footer__payment">
-                             <ul>
-                                 <li><i class="fab fa-cc-stripe"></i></li>
-                                 <li><i class="fab fa-cc-paypal"></i></li>
-                                 <li><i class="fab fa-cc-mastercard"></i></li>
-                                 <li><i class="fab fa-cc-visa"></i></li>
-                                 <li><i class="fab fa-cc-discover"></i></li>
-                                 <li><i class="fab fa-cc-amex"></i></li>
-                             </ul>
+                                 <span>All Right Reserved</span>
+                             </div>
+
                          </div>
                      </div>
                  </div>
              </div>
          </div>
-     </div>
  </footer>
 
  <!--====== Side Filters ======-->

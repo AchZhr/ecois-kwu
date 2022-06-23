@@ -18,11 +18,11 @@
 
 
                  <!--====== Search Form ======-->
-                 <form class="main-form" style="width:60% ;">
+                 <form id="frmCari" method="post" action="<?= base_url('Katalog/index/search') ?>" class="main-form" style="width:60% ;">
 
                      <label for="main-search"></label>
 
-                     <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" placeholder="Cari">
+                     <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" name="cari" placeholder="Cari">
 
                      <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button>
                  </form>
@@ -49,7 +49,7 @@
 
 
                              <li>
-                                 <a href="<?= base_url('Katalog') ?>" class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i></a>
+                                 <a href="<?= base_url('Katalog/index/All') ?>" class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i></a>
                              </li>
 
 

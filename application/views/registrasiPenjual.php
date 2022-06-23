@@ -84,47 +84,19 @@
 
                                      <div class="row">
                                          <div class="col-lg-4 u-s-m-b-30">
-                                             <h2 class="dash__h2 u-s-m-b-8">Nama</h2>
+                                             <h2 class="dash__h2 u-s-m-b-8">Upload Foto Ktm</h2>
 
-                                             <span class="dash__text"><?= $param->nama ?></span>
-                                         </div>
-                                         <div class="col-lg-4 u-s-m-b-30">
-                                             <h2 class="dash__h2 u-s-m-b-8">E-mail</h2>
-
-                                             <span class="dash__text"><?= $param->email ?></span>
-
-                                         </div>
-                                         <div class="col-lg-4 u-s-m-b-30">
-                                             <h2 class="dash__h2 u-s-m-b-8">Phone</h2>
-
-                                             <span class="dash__text"><?= $param->nohp ?></span>
-
-                                         </div>
-                                         <div class="col-lg-4 u-s-m-b-30">
-                                             <h2 class="dash__h2 u-s-m-b-8">Jurusan</h2>
-
-                                             <span class="dash__text"><?= $param->jurusan ?></span>
-                                         </div>
-                                         <div class="col-lg-4 u-s-m-b-30">
-                                             <h2 class="dash__h2 u-s-m-b-8">Gender</h2>
-
-                                             <span class="dash__text"><?= ($param->jk == 'L') ? 'Laki-Laki' : 'Perempuan'  ?></span>
-                                         </div>
-                                         <div class="col-lg-4 u-s-m-b-30">
-                                             <h2 class="dash__h2 u-s-m-b-8">Alamat</h2>
-
-                                             <span class="dash__text"><?= $param->alamat ?></span>
+                                             <span class="dash__text"><input type="file" name="ktm"></span>
                                          </div>
                                      </div>
                                      <div class="row">
                                          <div class="col-lg-12">
 
-                                             <!-- <div class="u-s-m-b-16">
+                                             <div class="u-s-m-b-16">
 
-                                                 <a class="dash__custom-link btn--e-transparent-brand-b-2" href="dash-edit-profile.html">Edit Profile</a>
-                                                 <a class="dash__custom-link btn--e-brand-b-2" href="#">Change Password</a>
+                                                 <a class="dash__custom-link btn--e-transparent-brand-b-2" href="dash-edit-profile.html">Daftar Menjadi Penjual</a>
 
-                                             </div> -->
+                                             </div>
                                              <div>
 
                                              </div>

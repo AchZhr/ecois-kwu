@@ -14,4 +14,11 @@ class User extends Data_Controller
         $this->data['param']    = $this->mahasiswa_model->getMhsData();
         $this->load->view('template/default', $this->data);
     }
+
+    function registrasiPenjual()
+    {
+        $this->data['view']    = 'registrasiPenjual';
+        $this->data['param']    = $this->mahasiswa_model->getMhsData();
+        $this->load->view('template/default', $this->data);
+    }
 }

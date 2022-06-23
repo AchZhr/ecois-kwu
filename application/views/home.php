@@ -21,7 +21,7 @@
                                     <span class="content-span-3 u-c-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam velit</span>
 
 
-                                    <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog') ?>">Belanja Sekarang!</a>
+                                    <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog/index/All') ?>">Belanja Sekarang!</a>
                                 </div>
                             </div>
                         <?php } else {
@@ -56,7 +56,7 @@
                                 <span class="content-span-3 u-c-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam velit</span>
 
 
-                                <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog') ?>">Belanja Sekarang!</a>
+                                <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog/index/All') ?>">Belanja Sekarang!</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
 
 
 
-                                <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog') ?>">Belanja Sekarang!</a>
+                                <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog/index/All') ?>">Belanja Sekarang!</a>
                             </div>
                         </div>
                     </div>
@@ -188,11 +188,11 @@
                             </div>
                             <div class="filter__category-wrapper">
 
-                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".makanan">Makanan</button>
+                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".Makanan">Makanan</button>
                             </div>
                             <div class="filter__category-wrapper">
 
-                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".barang">Barang</button>
+                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".Barang">Barang</button>
                             </div>
                             <div class="filter__category-wrapper">
 
@@ -208,7 +208,7 @@
 
                                 ?>
 
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item barang">
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item <?= $produk->kategori; ?>">
                                         <div class="product-o product-o--hover-on product-o--radius">
                                             <div class="product-o__wrap">
 
@@ -642,34 +642,34 @@ if (!$this->session->userdata('logged_in')) {
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script>
     $(document).ready(function() {
-        var availableTags = [
-            "ActionScript",
-            "AppleScript",
-            "Asp",
-            "BASIC",
-            "C",
-            "C++",
-            "Clojure",
-            "COBOL",
-            "ColdFusion",
-            "Erlang",
-            "Fortran",
-            "Groovy",
-            "Haskell",
-            "Java",
-            "JavaScript",
-            "Lisp",
-            "Perl",
-            "PHP",
-            "Python",
-            "Ruby",
-            "Scala",
-            "Scheme"
-        ];
 
         $("#main-search").autocomplete({
-            source: availableTags
+            source: function(request, response) {
+                // Fetch data
+                $.ajax({
+                    url: "<?php echo base_url('Katalog/autocomplete'); ?>",
+                    type: 'post',
+                    dataType: "json",
+                    data: {
+                        search: request.term
+                    },
+                    success: function(data) {
+                        response(data);
+                    }
+                });
+            },
+            select: function(event, ui) {
+                // Set selection
+                $('#main-search').val(ui.item.label); // display the selected text
+                $('#frmCari').submit();
+                return false;
+            },
+            focus: function(event, ui) {
+                $("#main-search").val(ui.item.label);
+                return false;
+            },
         });
+
     })
 </script>
 

@@ -5,7 +5,6 @@ class MY_Controller extends CI_Controller
    protected $ignore_pages = array(
       '/front/login',
       '/front/logout',
-      '/images',
    );
 
    /**
