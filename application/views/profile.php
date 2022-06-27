@@ -119,12 +119,12 @@
                                      <div class="row">
                                          <div class="col-lg-12">
 
-                                             <!-- <div class="u-s-m-b-16">
+                                             <div class="u-s-m-b-16">
 
-                                                 <a class="dash__custom-link btn--e-transparent-brand-b-2" href="dash-edit-profile.html">Edit Profile</a>
+                                                 <a class="dash__custom-link btn--e-transparent-brand-b-2" href="<?= base_url('user/edit') ?>">Edit Profile</a>
                                                  <a class="dash__custom-link btn--e-brand-b-2" href="#">Change Password</a>
 
-                                             </div> -->
+                                             </div>
                                              <div>
 
                                              </div>

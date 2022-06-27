@@ -67,7 +67,7 @@
                                                      <option selected disabled>Pilih</option>
                                                      <option value="Sistem Informasi">Sistem Informasi</option>
                                                      <option value="Informatika">Informatika</option>
-                                                     <option value="Data Sience">Data Sience</option>
+                                                     <option value="Data Sience">Data Science</option>
                                                  </select>
 
                                              </div>

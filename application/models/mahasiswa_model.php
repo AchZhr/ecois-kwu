@@ -26,4 +26,10 @@ class mahasiswa_model extends Data_Model
         $this->db->where('npm', $this->session->userdata('npm'));
         return $this->db->get()->row();
     }
+
+    function update($npm= '' , $nama = '', $jk = '', $jurusan = '', $nohp = '', $email = '', $alamat = '')
+    {
+        $sql = "UPDATE mahasiswa SET  nama = '$nama' , jk = '$jk' , jurusan = '$jurusan' , nohp = '$nohp' , email = '$email' , alamat = '$alamat'  where npm = '$npm'";
+        return $this->db->query($sql);
+    }
 }
