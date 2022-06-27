@@ -124,18 +124,18 @@
                  <div class="col-lg-4 col-md-6">
                      <div class="outer-footer__content u-s-m-b-40">
 
-                         <span class="outer-footer__content-title">Contact Us</span>
+                         <span class="outer-footer__content-title">Kontak Kami</span>
                          <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
 
-                             <span>4247 Ashford Drive Virginia VA-20006 USA</span>
-                         </div>
+                             <span>Jl.Raya Rungkut Madya, Gunung Anyar, Surabaya</span>
+                         </div>  
                          <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
 
-                             <span>(+0) 900 901 904</span>
+                             <span>0878 1148 8302</span>
                          </div>
                          <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
 
-                             <span>contact@domain.com</span>
+                             <span>ecois.upnjatim@gmail.com</span>
                          </div>
                          <div class="outer-footer__social">
                              <ul>
@@ -163,7 +163,7 @@
                          </div>
                      </div>
                  </div>
-                 <div class="col-lg-4 col-md-6">
+                 <!-- <div class="col-lg-4 col-md-6">
                      <div class="row">
                          <div class="col-lg-6 col-md-6">
                              <div class="outer-footer__content u-s-m-b-40">
@@ -226,8 +226,8 @@
                              </div>
                          </div>
                      </div>
-                 </div>
-                 <div class="col-lg-4 col-md-12">
+                 </div> -->
+                 <!-- <div class="col-lg-4 col-md-12">
                      <div class="outer-footer__content">
 
                          <span class="outer-footer__content-title">Join our Newsletter</span>
@@ -262,7 +262,7 @@
                              <span class="newsletter__text">Subscribe to the mailing list to receive updates on promotions, new arrivals, discount and coupons.</span>
                          </form>
                      </div>
-                 </div>
+                 </div> -->
              </div>
          </div>
      </div>
@@ -279,7 +279,7 @@
 
                              <span>All Right Reserved</span>
                          </div>
-                         <div class="lower-footer__payment">
+                         <!-- <div class="lower-footer__payment">
                              <ul>
                                  <li><i class="fab fa-cc-stripe"></i></li>
                                  <li><i class="fab fa-cc-paypal"></i></li>
@@ -288,7 +288,7 @@
                                  <li><i class="fab fa-cc-discover"></i></li>
                                  <li><i class="fab fa-cc-amex"></i></li>
                              </ul>
-                         </div>
+                         </div> -->
                      </div>
                  </div>
              </div>
@@ -347,6 +347,21 @@
  <script>
      $(document).ready(function() {
 
+     })
+ </script>
+
+ <script>
+     $(document).ready(function() {
+         $('form').submit(function(e) {
+             if ($('#gender').val() == null || $('#gender').val() == 'Pilih') {
+                 alert("Pilih Gender")
+                 e.preventDefault()
+             } else if ($('#jur').val() == null || $('#jur').val() == 'Pilih') {
+                 alert("Pilih Jurusan")
+                 e.preventDefault()
+
+             }
+         })
      })
  </script>
  </body>
