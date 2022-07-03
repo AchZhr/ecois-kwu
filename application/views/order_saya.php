@@ -49,183 +49,87 @@
                              <!--====== End - Dashboard Features ======-->
                          </div>
                          <div class="col-lg-9 col-md-12">
-                             <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white">
+                             <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white u-s-m-b-30">
                                  <div class="dash__pad-2">
-                                     <h1 class="dash__h1 u-s-m-b-14">Pendaftaran Toko</h1>
-                                     <?php if ($param['mhs']->seller == '0') {
+                                     <h1 class="dash__h1 u-s-m-b-14">Pesanan saya</h1>
 
+
+                                     <?php if (count($param['order']) != 0) {
                                         ?>
-                                         <div class="row">
-                                             <div class="col-lg-12">
-                                                 <form class="dash-edit-p" method="POST" action="<?= base_url('User/daftarPenjual') ?>" enctype="multipart/form-data">
-                                                     <div class="gl-inline">
-                                                         <div class="u-s-m-b-30">
+                                         <span class="dash__text u-s-m-b-30">Silahkan Hubungi Penjual Melalui Whatsapp Untuk Melakukan Pembayaran</span>
+                                     <?php } ?>
+                                     <div class="m-order__list">
 
-                                                             <label class="gl-label" for="reg-fname">NPM *</label>
+                                         <?php if (count($param['order']) != 0) {
+                                                foreach ($param['order'] as $order) {
+                                            ?>
 
-                                                             <input name="npm" class="input-text input-text--primary-style" type="text" id="reg-fname" readonly value=<?= $param['mhs']->npm ?>>
-                                                         </div>
-                                                         <div class="u-s-m-b-30">
 
-                                                             <label class="gl-label" for="reg-lname">NAMA Toko*</label>
-
-                                                             <input name="nama" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="Nama Toko" required>
-                                                         </div>
-                                                     </div>
-                                                     <div class="gl-inline">
-                                                         <div class="u-s-m-b-30">
-
-                                                             <label class="gl-label" for="reg-lname">Kategori *</label>
-                                                             <select name="kategori" required class="select-box select-box--primary-style" id="kategori" style="width: 100%;">
-                                                                 <option selected disabled>Pilih</option>
-
-                                                                 <option value="Fashion & Aksesoris">Fashion & Aksesoris</option>
-                                                                 <option value="Sepatu">Sepatu</option>
-                                                                 <option value="Pakaian">Pakaian</option>
-                                                                 <option value="Produk Kecantikan">Produk Kecantikan</option>
-                                                                 <option value="Food & Beverage">Food & Beverage</option>
-                                                                 <option value="Handphone & Aksesoris">Handphone & Aksesoris</option>
-                                                                 <option value="Hobi & Koleksi">Hobi & Koleksi</option>
-                                                                 <option value="Alat Kesehatan">Alat Kesehatan</option>
-                                                                 <option value="Komputer & Aksesoris">Komputer & Aksesoris</option>
-                                                                 <option value="Olahraga & Outdoor">Olahraga & Outdoor</option>
-                                                                 <option value="Otomotif">Otomotif</option>
-                                                                 <option value="Buku & ALat Tulis">Buku & ALat Tulis</option>
-                                                                 <option value="Jasa & Layanan">Jasa & Layanan</option>
-
-                                                             </select>
-                                                         </div>
-                                                         <div class="u-s-m-b-30">
-
-                                                             <label class="gl-label" for="reg-lname">Facebook </label>
-
-                                                             <input name="fb" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="Facebook">
-                                                         </div>
-                                                     </div>
-                                                     <div class="gl-inline">
-                                                         <div class="u-s-m-b-30">
-
-                                                             <label class="gl-label" for="reg-lname">Instagram</label>
-
-                                                             <input name="ig" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="Instagram">
-                                                         </div>
-                                                         <div class="u-s-m-b-30">
-
-                                                             <label class="gl-label" for="reg-lname">Whatsapp *</label>
-
-                                                             <input name="wa" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="Whatsapp" required>
-                                                         </div>
-                                                     </div>
-
-                                                     <div class="gl-inline">
-                                                         <div class="u-s-m-b-30">
-
-                                                             <label class="gl-label" for="reg-lname">Lokasi *</label>
-
-                                                             <textarea name="lokasi" id="" cols="108" rows="5" class="text-area text-area--primary-style" placeholder="Lokasi"></textarea>
-
-                                                         </div>
-
-                                                     </div>
-                                                     <div class="gl-inline">
-
-                                                         <div class="row">
-                                                             <div class="col-lg-4 u-s-m-b-30">
-                                                                 <h2 class="dash__h2 u-s-m-b-8">Upload Foto Ktm</h2>
-
-                                                                 <span class="dash__text"><input type="file" name="foto" required></span>
+                                                 <div class="m-order__get">
+                                                     <div class="manage-o__header u-s-m-b-30">
+                                                         <div class="dash-l-r">
+                                                             <div>
+                                                                 <div class="manage-o__text-2 u-c-secondary">Pesanan #<?= $order->orderid ?></div>
+                                                                 <div class="manage-o__text u-c-silver">Tanggal Pesan <?= $order->tgl_order ?></div>
                                                              </div>
-                                                             <div class="col-lg-4 u-s-m-b-30">
-                                                                 <h2 class="dash__h2 u-s-m-b-8">Upload Foto Usaha</h2>
+                                                             <div>
+                                                                 <div class="dash__link dash__link--brand">
+                                                                     <?php if ($order->status == 0) {
 
-                                                                 <span class="dash__text"><input type="file" name="usaha" required></span>
+                                                                        ?>
+                                                                         <a target="_blank" href="https://wa.me/<?= $order->wa ?>" style="padding-right: 10px;">Bayar Pesanan</a>
+
+                                                                     <?php }
+
+                                                                        ?>
+
+                                                                     <a href="<?= base_url('User') ?>/detailOrder/<?= $order->orderid; ?>">Detail</a>
+                                                                 </div>
                                                              </div>
                                                          </div>
                                                      </div>
+                                                     <div class="manage-o__description">
+                                                         <div class="description__container">
 
-                                                     <button class="btn btn--e-brand-b-2" name="submit" type="submit">Daftar</button>
-
-
-                                                 </form>
-                                             </div>
-                                         </div>
-
-                                     <?php } else if ($param['mhs']->seller == '1') {
-
-                                        ?>
-                                         <h2>Data Anda Sedang Di Verifikasi Oleh Admin</h2>
-
-                                     <?php
-
-                                        } else if ($param['mhs']->seller == '2') {
-
-                                        ?>
-                                         <div class="row">
-                                             <div class="col-lg-12">
-                                                 <form class="dash-edit-p">
-                                                     <div class="gl-inline">
-                                                         <div class="u-s-m-b-30">
-
-                                                             <label class="gl-label" for="reg-fname">NPM *</label>
-
-                                                             <input name="npm" class="input-text input-text--primary-style" type="text" readonly value="<?= $param['mhs']->npm ?>">
+                                                             <div class="description-title"><a target="_blank" href="<?php echo base_url(); ?>Katalog/detail/<?= $order->id_produk; ?>"><?= $order->nama_produk ?></a></div>
                                                          </div>
-                                                         <div class="u-s-m-b-30">
+                                                         <div class="description__info-wrap">
+                                                             <div>
 
-                                                             <label class="gl-label" for="reg-lname">NAMA Toko*</label>
+                                                                 <span class="manage-o__badge badge--processing" style="width:100% ;"><?php if ($order->status == 0) {
+                                                                                                                                            echo 'Belum Dibayar';
+                                                                                                                                        } else if ($order->jumlah == 1) {
+                                                                                                                                            echo 'Diproses';
+                                                                                                                                        } else {
+                                                                                                                                            echo 'Selesai';
+                                                                                                                                        }
+                                                                                                                                        ?></span>
+                                                             </div>
+                                                             <div>
 
-                                                             <input name="nama" class="input-text input-text--primary-style" type="text" readonly placeholder="Nama Toko" value="<?= $param['toko']->nama_toko ?>" required>
+                                                                 <span class="manage-o__text-2 u-c-silver">Jumlah:
+
+                                                                     <span class="manage-o__text-2 u-c-secondary"><?= $order->jumlah ?></span></span>
+                                                             </div>
+                                                             <div>
+
+                                                                 <span class="manage-o__text-2 u-c-silver">Total:
+
+                                                                     <span class="manage-o__text-2 u-c-secondary"><?= "Rp " . number_format($order->total, 0, '', '.'); ?></span></span>
+                                                             </div>
                                                          </div>
                                                      </div>
-                                                     <div class="gl-inline">
-                                                         <div class="u-s-m-b-30">
+                                                 </div>
 
-                                                             <label class="gl-label" for="reg-lname">Kategori *</label>
+                                         <?php }
+                                            } else {
+                                                echo '<h3>Belum Ada Order</h3>';
+                                            }
 
-                                                             <input name="kategori" class="input-text input-text--primary-style" type="text" id="reg-lname" readonly placeholder="Instagram" value="<?= $param['toko']->kategori ?>" required>
-                                                         </div>
-                                                         <div class="u-s-m-b-30">
+                                            ?>
 
-                                                             <label class="gl-label" for="reg-lname">Facebook </label>
+                                     </div>
 
-                                                             <input name="fb" class="input-text input-text--primary-style" type="text" id="reg-lname" readonly placeholder="Whatsapp" value="<?= $param['toko']->fb ?>">
-                                                         </div>
-                                                     </div>
-                                                     <div class="gl-inline">
-                                                         <div class="u-s-m-b-30">
-
-                                                             <label class="gl-label" for="reg-lname">Instagram</label>
-
-                                                             <input name="ig" class="input-text input-text--primary-style" type="text" id="reg-lname" readonly placeholder="Instagram" value="<?= $param['toko']->instagram ?>">
-                                                         </div>
-                                                         <div class="u-s-m-b-30">
-
-                                                             <label class="gl-label" for="reg-lname">Whatsapp *</label>
-
-                                                             <input name="wa" class="input-text input-text--primary-style" type="text" id="reg-lname" readonly placeholder="Whatsapp" value="<?= $param['toko']->wa ?>" required>
-                                                         </div>
-                                                     </div>
-
-                                                     <div class="gl-inline">
-                                                         <div class="u-s-m-b-30">
-
-                                                             <label class="gl-label" for="reg-lname">Lokasi</label>
-
-                                                             <textarea name="lokasi" id="" cols="108" rows="5" readonly class="text-area text-area--primary-style" placeholder="Lokasi"><?= $param['toko']->lokasi ?></textarea>
-
-                                                         </div>
-
-                                                     </div>
-                                                     <h5>Sudah Terdaftar</h5>
-
-                                                 </form>
-                                                 <a href="<?= base_url('Penjual') ?>" class="shop-now-link btn--e-brand">Masuk Ke Dasboard Penjual</a>
-
-                                             </div>
-                                         </div>
-                                     <?php
-
-                                        } ?>
                                  </div>
                              </div>
                          </div>
@@ -239,7 +143,7 @@
      <!--====== End - Section 2 ======-->
  </div>
  <!--====== End - App Content ======-->
-
+ <br><br>
 
  <!--====== Main Footer ======-->
  <footer>
@@ -471,13 +375,13 @@
  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
  <script>
      $(document).ready(function() {
-         $('form').submit(function(e) {
-             if ($('#kategori').val() == null || $('#kategori').val() == 'Pilih') {
-                 alert("Pilih Kategori")
-                 e.preventDefault()
+         //  $('form').submit(function(e) {
+         //      if ($('#kategori').val() == null || $('#kategori').val() == 'Pilih') {
+         //          alert("Pilih Kategori")
+         //          e.preventDefault()
 
-             }
-         })
+         //      }
+         //  })
      })
  </script>
 

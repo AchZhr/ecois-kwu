@@ -27,9 +27,15 @@ class mahasiswa_model extends Data_Model
         return $this->db->get()->row();
     }
 
-    function update($npm= '' , $nama = '', $jk = '', $jurusan = '', $nohp = '', $email = '', $alamat = '')
+    function update($npm = '', $nama = '', $jk = '', $jurusan = '', $nohp = '', $email = '', $alamat = '')
     {
         $sql = "UPDATE mahasiswa SET  nama = '$nama' , jk = '$jk' , jurusan = '$jurusan' , nohp = '$nohp' , email = '$email' , alamat = '$alamat'  where npm = '$npm'";
+        return $this->db->query($sql);
+    }
+
+    function sellerStatus($npm = '', $stat = '')
+    {
+        $sql = "UPDATE mahasiswa SET  seller = '$stat'   where npm = '$npm'";
         return $this->db->query($sql);
     }
 }

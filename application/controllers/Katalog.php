@@ -9,6 +9,7 @@ class Katalog extends CI_Controller
         parent::__construct();
         $this->load->library('datatables');
         $this->load->model('produk_model');
+        $this->load->model('toko_model');
     }
 
     function index()
@@ -53,6 +54,8 @@ class Katalog extends CI_Controller
         $produk['data'] = $this->produk_model->getDataProduk($id);
         $produk['review'] = $review;
         $produk['rating'] = $this->produk_model->getRating($id);
+        $produk['toko'] = $this->toko_model->getTokoByID($produk['data']->id_toko);
+
 
         $produk['jumlahReview'] = count($review);
 

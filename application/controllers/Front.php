@@ -33,6 +33,7 @@ class Front extends Front_Controller
 
 
 			if ($this->auth->login($username, $password)) {
+				// $this->session->set_userdata('userId', 'oke');
 				redirect($this->requested_page);
 			} else {
 				$this->load->view('template/default', $this->data);

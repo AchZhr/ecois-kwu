@@ -15,6 +15,7 @@
                              </div> -->
                              <div class="shop-p__tool-style">
                                  <div class="tool-style__group u-s-m-b-8">
+                                     <span class="js-shop-filter-target" data-side="#side-filter">Filters</span>
 
                                      <span class="js-shop-grid-target is-active">Grid</span>
 
@@ -42,66 +43,106 @@
                          <div class="shop-p__collection">
                              <div class="row is-grid-active">
                                  <?php
-                                    foreach ($param as $produk) {
+                                    if (count($param) == 0) {
+
                                     ?>
-                                     <div class="col-lg-3 col-md-4 col-sm-6">
-                                         <div class="product-m">
-                                             <div class="product-m__thumb">
+                                     <div class="container">
+                                         <div class="row">
+                                             <div class="col-lg-12 col-md-12 u-s-m-b-30">
+                                                 <div class="empty">
+                                                     <div class="empty__wrap">
 
-                                                 <a class="aspect aspect--bg-grey aspect--square u-d-block" href="<?php echo base_url(); ?>Katalog/detail/<?= $produk->id_produk; ?>">
+                                                         <span class="empty__big-text">Maaf</span>
 
-                                                     <img class="aspect__img" src="<?php echo base_url(); ?>assets/client/<?= json_decode($produk->image)->foto[0] ?>" alt=""></a>
+                                                         <span class="empty__text-1">Produk Tidak Ditemukan</span>
 
-                                             </div>
-                                             <div class="product-m__content">
-                                                 <div class="product-m__category">
 
-                                                     <a href="shop-side-version-2.html"><?= $produk->kategori; ?></a>
-                                                 </div>
-                                                 <div class="product-m__name">
 
-                                                     <a href="<?php echo base_url(); ?>Katalog/detail/<?= $produk->id_produk; ?>"><?= $produk->nama_produk; ?></a>
-                                                 </div>
-                                                 <div class="product-m__rating gl-rating-style">
-                                                     <i class="fas fa-star"></i>
-                                                     <i class="fas fa-star"></i>
-                                                     <i class="fas fa-star-half-alt"></i>
-                                                     <i class="far fa-star"></i>
-                                                     <i class="far fa-star"></i>
-
-                                                     <span class="product-m__review">(23)</span>
-                                                 </div>
-                                                 <?php
-                                                    if ($produk->diskon != 0) {
-
-                                                    ?>
-                                                     <div class="product-m__price"><?= "Rp " . number_format($produk->harga_jual, 0, '', '.'); ?>
-
-                                                         <span class="product-m__discount"><?= "Rp " . number_format($produk->harga, 0, '', '.'); ?></span>
                                                      </div>
-                                                 <?php
-                                                    } else {
-                                                    ?>
-                                                     <div class="product-m__price"><?= "Rp " . number_format($produk->harga_jual, 0, '', '.'); ?></div>
-
-                                                 <?php
-                                                    }
-                                                    ?>
-                                                 <span class="product-o__category" style="margin-top: 3px;font-size:10pt"><a href="#"><?= $produk->nama_toko; ?></a></span>
-
-                                                 <div class="product-m__hover">
-                                                     <div class="product-m__preview-description">
-
-                                                         <span><?= $produk->deskripsi; ?></span>
-                                                     </div>
-
                                                  </div>
                                              </div>
                                          </div>
                                      </div>
                                  <?php
-                                    }
+                                    } else {
+
+
+
                                     ?>
+                                     <?php
+
+                                        foreach ($param as $produk) {
+                                        ?>
+                                         <div class="col-lg-3 col-md-4 col-sm-6">
+                                             <div class="product-m">
+                                                 <div class="product-m__thumb">
+
+                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block" href="<?php echo base_url(); ?>Katalog/detail/<?= $produk->id_produk; ?>">
+
+                                                         <img class="aspect__img" src="<?php echo base_url(); ?>/uploads/produk/<?= json_decode($produk->image)->foto[0] ?>" alt=""></a>
+
+                                                 </div>
+                                                 <div class="product-m__content">
+                                                     <div class="product-m__category">
+
+                                                         <a href="shop-side-version-2.html"><?= $produk->kategori; ?></a>
+                                                     </div>
+                                                     <div class="product-m__name">
+
+                                                         <a href="<?php echo base_url(); ?>Katalog/detail/<?= $produk->id_produk; ?>"><?= $produk->nama_produk; ?></a>
+                                                     </div>
+                                                     <div class="product-m__rating gl-rating-style">
+                                                         <i class="fas fa-star"></i>
+                                                         <i class="fas fa-star"></i>
+                                                         <i class="fas fa-star-half-alt"></i>
+                                                         <i class="far fa-star"></i>
+                                                         <i class="far fa-star"></i>
+
+                                                         <span class="product-m__review">(23)</span>
+                                                     </div>
+                                                     <?php
+                                                        if ($produk->diskon != 0) {
+
+                                                        ?>
+                                                         <div class="product-m__price"><?= "Rp " . number_format($produk->harga_jual, 0, '', '.'); ?>
+
+                                                             <span class="product-m__discount"><?= "Rp " . number_format($produk->harga, 0, '', '.'); ?></span>
+                                                         </div>
+                                                     <?php
+                                                        } else {
+                                                        ?>
+                                                         <div class="product-m__price"><?= "Rp " . number_format($produk->harga_jual, 0, '', '.'); ?></div>
+
+                                                     <?php
+                                                        }
+                                                        ?>
+                                                     <span class="product-o__category" style="margin-top: 3px;font-size:10pt"><a href="#"><?= $produk->nama_toko; ?></a></span>
+
+                                                     <div class="product-m__hover">
+                                                         <?php
+                                                            if ($produk->deskripsi != '') {
+
+                                                            ?>
+                                                             <div class="product-m__preview-description">
+
+                                                                 <span><?= $produk->deskripsi; ?></span>
+                                                             </div>
+                                                         <?php
+                                                            }
+                                                            ?>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     <?php
+                                        }
+                                        ?>
+                                 <?php
+
+                                    }
+
+                                    ?>
+
                              </div>
                          </div>
                          <div class="u-s-p-y-60">
@@ -141,31 +182,142 @@
      </div>
      <!--====== End - Section 1 ======-->
  </div>
+
+
+ <!--====== Side Filters ======-->
+ <div class="shop-a" id="side-filter">
+     <div class="shop-a__wrap">
+         <div class="shop-a__inner gl-scroll">
+             <div class="shop-w-master">
+                 <h1 class="shop-w-master__heading u-s-m-b-30"><i class="fas fa-filter u-s-m-r-8"></i>
+
+                     <span>FILTER</span>
+                 </h1>
+                 <div class="shop-w-master__sidebar">
+                     <div class="u-s-m-b-30">
+                         <div class="shop-w">
+                             <div class="shop-w__intro-wrap">
+                                 <h1 class="shop-w__h">Kategori</h1>
+
+                             </div>
+                             <div class="shop-w__wrap collapse show" id="s-category">
+                                 <ul class="shop-w__category-list gl-scroll">
+                                     <li class="has-list">
+
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>FNA">Fashion & Aksesoris</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>Sepatu">Sepatu</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>Pakaian">Pakaian</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>FNB">Food & Beverage</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>PK">Produk Kecantikan</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>HNK">Hobi & Koleksi</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>HNA">Handphone & Aksesoris</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>AK">Alat Kesehatan</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>KNA">Komputer & Aksesoris</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>ONO">Olahraga & Outdoor</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>Otomotif">Otomotif</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>BNAT">Buku & ALat Tulis</a>
+
+
+                                     </li>
+                                     <li class="has-list">
+
+                                         <a href="<?= base_url('Katalog/index/') ?>JNL">Jasa & Layanan</a>
+
+
+                                     </li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </div>
+
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!--====== End - Side Filters ======-->
  <!--====== End - App Content ======-->
 
 
  <!--====== Main Footer ======-->
-<footer>
-    <div class="outer-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="outer-footer__content u-s-m-b-40">
+ <footer>
+     <div class="outer-footer">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-4 col-md-6">
+                     <div class="outer-footer__content u-s-m-b-40">
 
-                        <span class="outer-footer__content-title">Kontak Kami</span>
-                        <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
+                         <span class="outer-footer__content-title">Kontak Kami</span>
+                         <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
 
-                            <span>Jl.Raya Rungkut Madya, Gunung Anyar, Surabaya</span>
-                        </div>
-                        <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
+                             <span>Jl.Raya Rungkut Madya, Gunung Anyar, Surabaya</span>
+                         </div>
+                         <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
 
-                            <span>0878 1148 8302</span>
-                        </div>
-                        <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
+                             <span>0878 1148 8302</span>
+                         </div>
+                         <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
 
-                            <span>ecois.upnjatim@gmail.com</span>
-                        </div>
-                        <!-- <div class="outer-footer__social">
+                             <span>ecois.upnjatim@gmail.com</span>
+                         </div>
+                         <!-- <div class="outer-footer__social">
                             <ul>
                                 <li>
 
@@ -173,22 +325,16 @@
                                 </li>
                                 <li>
 
-<<<<<<< HEAD
-                                     <a class="s-tw--color-hover" href="#"><i class="fa fa-tiktok"></i></a>
-                                 </li>
-                                 <li>
-=======
                                     <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a>
                                 </li>
                             </ul>
                         </div> -->
-                    </div>
-                </div>
-                <!-- <div class="col-lg-4 col-md-6">
+                     </div>
+                 </div>
+                 <!-- <div class="col-lg-4 col-md-6">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="outer-footer__content u-s-m-b-40">
->>>>>>> f3646c0bea79138bd3645b16311bd070761dc231
 
                                 <span class="outer-footer__content-title">Information</span>
                                 <div class="outer-footer__list-wrap">
@@ -199,37 +345,6 @@
                                         </li>
                                         <li>
 
-<<<<<<< HEAD
-                                     <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a>
-                                 </li>
-                             </ul>
-                         </div>
-                     </div>
-
-                 </div>
-             </div>
-         </div>
-         <div class="lower-footer">
-             <div class="container">
-                 <div class="row">
-                     <div class="col-lg-12">
-                         <div class="lower-footer__content">
-                             <div class="lower-footer__copyright">
-
-                                 <span>Copyright © 2018</span>
-
-                                 <a href="index.html">Reshop</a>
-
-                                 <span>All Right Reserved</span>
-                             </div>
-
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
- </footer>
-=======
                                             <a href="dashboard.html">Account</a>
                                         </li>
                                         <li>
@@ -280,7 +395,7 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- <div class="col-lg-4 col-md-12">
+                 <!-- <div class="col-lg-4 col-md-12">
                     <div class="outer-footer__content">
 
                         <span class="outer-footer__content-title">Join our Newsletter</span>
@@ -317,30 +432,29 @@
                         </form>
                     </div>
                 </div> -->
-            </div>
-        </div>
-    </div>
-    <div class="lower-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="lower-footer__content">
-                        <div class="lower-footer__copyright">
+             </div>
+         </div>
+     </div>
+     <div class="lower-footer">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12">
+                     <div class="lower-footer__content">
+                         <div class="lower-footer__copyright">
 
-                            <span>Copyright © 2022</span>
+                             <span>Copyright © 2022</span>
 
-                            <a href="index.html">ECOIS UPN JATIM</a>
+                             <a href="index.html">ECOIS UPN JATIM</a>
 
-                            <span>All Right Reserved</span>
-                        </div>
+                             <span>All Right Reserved</span>
+                         </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
->>>>>>> f3646c0bea79138bd3645b16311bd070761dc231
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </footer>
 
  <!--====== Side Filters ======-->
 

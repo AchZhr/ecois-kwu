@@ -1,45 +1,52 @@
 <div class="app-content">
 
-<!--====== Section 1 ======-->
-<div class="u-s-p-y-30">
+    <!--====== Section 1 ======-->
+    <div class="u-s-p-y-30">
 
-    <!--====== Section Content ======-->
+        <!--====== Section Content ======-->
 
-</div>
-<!--====== End - Section 1 ======-->
+    </div>
+    <!--====== End - Section 1 ======-->
 
 
-<!--====== Section 2 ======-->
-<div class="u-s-p-b-60">
+    <!--====== Section 2 ======-->
+    <div class="u-s-p-b-60">
 
-    <!--====== Section Content ======-->
-    <div class="section__content">
-        <div class="dash">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-12">
+        <!--====== Section Content ======-->
+        <div class="section__content">
+            <div class="dash">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12">
 
-                        <!--====== Dashboard Features ======-->
-                        <div class="dash__box dash__box--bg-white dash__box--shadow u-s-m-b-30">
-                            <div class="dash__pad-1">
+                            <!--====== Dashboard Features ======-->
+                            <div class="dash__box dash__box--bg-white dash__box--shadow u-s-m-b-30">
+                                <div class="dash__pad-1">
 
-                                <span class="dash__text u-s-m-b-16">Hello, <?= $param->nama ?></span>
-                                <ul class="dash__f-list">
+                                    <span class="dash__text u-s-m-b-16">Hello, <?= $param->nama ?></span>
+                                    <ul class="dash__f-list">
 
-                                    <li>
+                                        <li>
 
-                                        <a class="dash-active" href="<?= base_url('user') ?>">Profil Saya</a>
-                                    </li>
+                                            <a class="dash-active" href="<?= base_url('User') ?>">Profil Saya</a>
+                                        </li>
 
-                                    <li>
 
-                                        <a class="dash-active" href="<?= base_url('user/registrasiPenjual') ?>">Daftar Menjadi Penjual</a>
-                                    </li>
+                                        <li>
 
-                                </ul>
+                                            <a class="dash-active" href="<?= base_url('User') ?>/myorder">Daftar Pesanan</a>
+                                        </li>
+
+
+                                        <li>
+
+                                            <a class="dash-active" href="<?= base_url('User/registrasiPenjual') ?>">toko</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <!-- <div class="dash__box dash__box--bg-white dash__box--shadow dash__box--w">
+                            <!-- <div class="dash__box dash__box--bg-white dash__box--shadow dash__box--w">
                             <div class="dash__pad-1">
                                 <ul class="dash__w-list">
                                     <li>
@@ -75,107 +82,153 @@
                                 </ul>
                             </div>
                         </div> -->
-                        <!--====== End - Dashboard Features ======-->
-                    </div>
-                    <div class="col-lg-9 col-md-12">
-                                    <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white">
-                                        <div class="dash__pad-2">
-                                            <h1 class="dash__h1 u-s-m-b-14">Edit Profile</h1>
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <form class="dash-edit-p" method="POST" action="<?= base_url('User/edit_data') ?>">
-                                                        <div class="gl-inline">
-                                                            <div class="u-s-m-b-30">
+                            <!--====== End - Dashboard Features ======-->
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white">
+                                <div class="dash__pad-2">
+                                    <h1 class="dash__h1 u-s-m-b-14">Edit Profile</h1>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <form class="dash-edit-p" method="POST" action="<?= base_url('User/edit_data') ?>">
+                                                <div class="gl-inline">
+                                                    <div class="u-s-m-b-30">
 
-                                                                <label class="gl-label" for="reg-fname">NPM *</label>
+                                                        <label class="gl-label" for="reg-fname">NPM *</label>
 
-                                                                <input name="npm" class="input-text input-text--primary-style" type="text" id="reg-fname" readonly value =<?= $param->npm ?>></div>
-                                                            <div class="u-s-m-b-30">
+                                                        <input name="npm" class="input-text input-text--primary-style" type="text" id="reg-fname" readonly value=<?= $param->npm ?>>
+                                                    </div>
+                                                    <div class="u-s-m-b-30">
 
-                                                                <label class="gl-label" for="reg-lname">NAMA *</label>
+                                                        <label class="gl-label" for="reg-lname">NAMA *</label>
 
-                                                                <input name="nama" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="NAMA"></div>
-                                                        </div>
-                                                        <div class="gl-inline">
-                                                            <div class="u-s-m-b-30">
-
-                                                                <!--====== Date of Birth Select-Box ======-->
-
-                                                                <span class="gl-label">GENDER *</span>
-                                                                <div class="gl-dob"><select name="jk" class="select-box select-box--primary-style">
-                                                                        <option selected disabled>Pilih</option>
-                                                                        <option value="Laki - Laki">Laki - Laki</option>
-                                                                        <option value="Perempuan">Perempuan</option>
-                                                                    </select></div>
-                                                                <!--====== End - Date of Birth Select-Box ======-->
-                                                            </div>
-                                                            <div class="u-s-m-b-30">
-
-                                                                <label class="gl-label" for="gender">JURUSAN *</label><select name="jurusan" class="select-box select-box--primary-style u-w-100" id="jur">
-                                                                    <option selected  disabled>Pilih</option>
-                                                                    <option value="Informatika">Informatika</option>
-                                                                    <option value="Sistem Informasi">Sistem Informasi</option>
-                                                                    <option value="Data Science">Data Science</option>
-                                                                </select></div>
-                                                        </div>
-                                                        <div class="gl-inline">
-                                                            <div class="u-s-m-b-30">
-
-                                                                <label class="gl-label" for="reg-fname">EMAIL *</label>
-
-                                                                <input name="email" class="input-text input-text--primary-style" type="text" id="reg-fname" placeholder="E-MAIL"></div>
-                                                            <div class="u-s-m-b-30">
-
-                                                                <label class="gl-label" for="reg-lname">No HP *</label>
-
-                                                                <input name="hp" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="No. HP"></div>
-                                                            <div class="u-s-m-b-30">
-
-                                                                <label class="gl-label" for="reg-lname">ALAMAT *</label>
-
-                                                                <input name="alamat" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="ALAMAT"></div>
-                                                        </div>
-
-                                                        <button class="btn btn--e-brand-b-2" type="submit">SIMPAN</button>
-                                                    </form>
+                                                        <input name="nama" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="NAMA" value="<?= $param->nama ?>" required>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                                <div class="gl-inline">
+                                                    <div class="u-s-m-b-30">
+
+                                                        <!--====== Date of Birth Select-Box ======-->
+
+                                                        <span class="gl-label">GENDER *</span>
+                                                        <div class="gl-dob"><select name="jk" id="gender" class="select-box select-box--primary-style">
+                                                                <?php if ($param->jk == 'L') {
+
+                                                                ?>
+                                                                    <option value="Laki - Laki" selected>Laki - Laki</option>
+                                                                    <option value="Perempuan">Perempuan</option>
+
+
+                                                                <?php } else {
+
+                                                                ?>
+                                                                    <option value="Laki - Laki">Laki - Laki</option>
+
+                                                                    <option value="Perempuan" selected>Perempuan</option>
+
+                                                                <?php
+
+                                                                } ?>
+                                                            </select></div>
+                                                        <!--====== End - Date of Birth Select-Box ======-->
+                                                    </div>
+                                                    <div class="u-s-m-b-30">
+
+                                                        <label class="gl-label" for="gender">JURUSAN *</label><select name="jurusan" class="select-box select-box--primary-style u-w-100" id="jur">
+                                                            <?php if ($param->jurusan == 'informatika') {
+
+                                                            ?>
+                                                                <option value="informatika" selected>informatika</option>
+                                                                <option value="sistem informasi">Sistem Informasi</option>
+                                                                <option value="data science">Data Science</option>
+
+
+                                                            <?php } else if ($param->jurusan == 'sistem informasi') {
+
+                                                            ?>
+                                                                <option value="informatika">Informatika</option>
+                                                                <option value="sistem informasi" selected>Sistem Informasi</option>
+                                                                <option value="data science">Data Science</option>
+
+                                                            <?php
+
+                                                            } else {
+
+                                                            ?>
+                                                                <option value="informatika">Informatika</option>
+                                                                <option value="sistem informasi">Sistem Informasi</option>
+                                                                <option value="data science" selected>Data Science</option>
+
+                                                            <?php
+
+
+
+                                                            } ?>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="gl-inline">
+                                                    <div class="u-s-m-b-30">
+
+                                                        <label class="gl-label" for="reg-fname">EMAIL *</label>
+
+                                                        <input name="email" class="input-text input-text--primary-style" type="text" id="reg-fname" placeholder="E-MAIL" value="<?= $param->email ?>" required>
+                                                    </div>
+                                                    <div class="u-s-m-b-30">
+
+                                                        <label class="gl-label" for="reg-lname">No HP *</label>
+
+                                                        <input name="hp" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="No. HP" value="<?= $param->nohp ?>" required>
+                                                    </div>
+                                                    <div class="u-s-m-b-30">
+
+                                                        <label class="gl-label" for="reg-lname">ALAMAT *</label>
+
+                                                        <input name="alamat" class="input-text input-text--primary-style" type="text" id="reg-lname" placeholder="ALAMAT" value="<?= $param->alamat ?>" required>
+                                                    </div>
+                                                </div>
+
+                                                <button class="btn btn--e-brand-b-2" type="submit">SIMPAN</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--====== End - Section Content ======-->
     </div>
-    <!--====== End - Section Content ======-->
-</div>
-<!--====== End - Section 2 ======-->
+    <!--====== End - Section 2 ======-->
 </div>
 <!--====== End - App Content ======-->
 
 
 <!--====== Main Footer ======-->
 <footer>
-<div class="outer-footer">
-   <div class="container">
-       <div class="row">
-           <div class="col-lg-4 col-md-6">
-               <div class="outer-footer__content u-s-m-b-40">
+    <div class="outer-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="outer-footer__content u-s-m-b-40">
 
-                   <span class="outer-footer__content-title">Kontak Kami</span>
-                   <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
+                        <span class="outer-footer__content-title">Kontak Kami</span>
+                        <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
 
-                       <span>Jl.Raya Rungkut Madya, Gunung Anyar, Surabaya</span>
-                   </div>
-                   <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
+                            <span>Jl.Raya Rungkut Madya, Gunung Anyar, Surabaya</span>
+                        </div>
+                        <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
 
-                       <span>0878 1148 8302</span>
-                   </div>
-                   <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
+                            <span>0878 1148 8302</span>
+                        </div>
+                        <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
 
-                       <span>ecois.upnjatim@gmail.com</span>
-                   </div>
-                   <!-- <div class="outer-footer__social">
+                            <span>ecois.upnjatim@gmail.com</span>
+                        </div>
+                        <!-- <div class="outer-footer__social">
                        <ul>
                            <li>
 
@@ -187,9 +240,9 @@
                            </li>
                        </ul>
                    </div> -->
-               </div>
-           </div>
-           <!-- <div class="col-lg-4 col-md-6">
+                    </div>
+                </div>
+                <!-- <div class="col-lg-4 col-md-6">
                <div class="row">
                    <div class="col-lg-6 col-md-6">
                        <div class="outer-footer__content u-s-m-b-40">
@@ -253,7 +306,7 @@
                    </div>
                </div>
            </div> -->
-           <!-- <div class="col-lg-4 col-md-12">
+                <!-- <div class="col-lg-4 col-md-12">
                <div class="outer-footer__content">
 
                    <span class="outer-footer__content-title">Join our Newsletter</span>
@@ -290,57 +343,34 @@
                    </form>
                </div>
            </div> -->
-       </div>
-   </div>
-</div>
-<div class="lower-footer">
-   <div class="container">
-       <div class="row">
-           <div class="col-lg-12">
-               <div class="lower-footer__content">
-                   <div class="lower-footer__copyright">
+            </div>
+        </div>
+    </div>
+    <div class="lower-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="lower-footer__content">
+                        <div class="lower-footer__copyright">
 
-                       <span>Copyright © 2022</span>
+                            <span>Copyright © 2022</span>
 
-                       <a href="index.html">ECOIS UPN JATIM</a>
+                            <a href="index.html">ECOIS UPN JATIM</a>
 
-                       <span>All Right Reserved</span>
-                   </div>
+                            <span>All Right Reserved</span>
+                        </div>
 
-               </div>
-           </div>
-       </div>
-   </div>
-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <!--====== Modal Section ======-->
 
 
-<!--====== Unsubscribe or Subscribe Newsletter ======-->
-<div class="modal fade" id="dash-newsletter">
-<div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content modal--shadow">
-        <div class="modal-body">
-            <form class="d-modal__form">
-                <div class="u-s-m-b-15">
-                    <h1 class="gl-modal-h1">Newsletter Subscription</h1>
 
-                    <span class="gl-modal-text">I have read and understood</span>
-
-                    <a class="d_modal__link" href="dash-my-profile.html">Ludus Privacy Policy</a>
-                </div>
-                <div class="gl-modal-btn-group">
-
-                    <button class="btn btn--e-brand-b-2" type="submit">SUBSCRIBE</button>
-
-                    <button class="btn btn--e-grey-b-2" type="button" data-dismiss="modal">CANCEL</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-</div>
 
 <!--====== Unsubscribe or Subscribe Newsletter ======-->
 <!--====== End - Modal Section ======-->
@@ -363,9 +393,18 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script>
-$(document).ready(function() {
+    $(document).ready(function() {
+        $('form').submit(function(e) {
+            if ($('#gender').val() == null || $('#gender').val() == 'Pilih') {
+                alert("Pilih Gender")
+                e.preventDefault()
+            } else if ($('#jur').val() == null || $('#jur').val() == 'Pilih') {
+                alert("Pilih Jurusan")
+                e.preventDefault()
 
-})
+            }
+        })
+    })
 </script>
 </body>
 

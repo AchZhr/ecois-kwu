@@ -147,6 +147,12 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-lg-12">
+                        <div class="load-more">
+
+                            <button class="btn btn--e-brand" type="button">Load More</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,108 +162,14 @@
     <!--====== End - Section 1 ======-->
 
 
-    <!--====== Section 2 ======-->
-    <div class="u-s-p-b-60">
 
-        <!--====== Section Intro ======-->
-        <div class="section__intro u-s-m-b-16">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section__text-wrap">
-                            <h1 class="section__heading u-c-secondary u-s-m-b-12">Produk Terlaris</h1>
-
-                            <span class="section__span u-c-silver">Pilih Kategori</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--====== End - Section Intro ======-->
-
-
-        <!--====== Section Content ======-->
-        <div class="section__content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="filter-category-container">
-                            <div class="filter__category-wrapper">
-
-                                <button class="btn filter__btn filter__btn--style-1 js-checked" type="button" data-filter="*">Semua</button>
-                            </div>
-                            <div class="filter__category-wrapper">
-
-                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".Makanan">Makanan</button>
-                            </div>
-                            <div class="filter__category-wrapper">
-
-                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".Barang">Barang</button>
-                            </div>
-                            <div class="filter__category-wrapper">
-
-                                <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".lain">Lain-Lain</button>
-                            </div>
-
-                        </div>
-                        <div class="filter__grid-wrapper u-s-m-t-30">
-                            <div class="row">
-
-                                <?php
-                                foreach ($param as $produk) {
-
-                                ?>
-
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item <?= $produk->kategori; ?>">
-                                        <div class="product-o product-o--hover-on product-o--radius">
-                                            <div class="product-o__wrap">
-
-                                                <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
-
-                                                    <img class="aspect__img" src="<?php echo base_url(); ?>assets/client/images/product/electronic/product2.jpg" alt=""></a>
-
-                                            </div>
-
-                                            <span class="product-o__category">
-
-                                                <a href="shop-side-version-2.html"><?= $produk->kategori; ?></a></span>
-
-                                            <span class="product-o__name">
-
-                                                <a href="product-detail.html"><?= $produk->nama_produk; ?></a></span>
-                                            <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-
-                                                <span class="product-o__review">(23)</span>
-                                            </div>
-
-                                            <span class="product-o__price"><?= $produk->harga_jual; ?></span>
-
-
-                                            <span class="product-o__category" style="margin-top: 3px;font-size:10pt"><a href="<?= $produk->id_toko; ?>"><?= $produk->id_toko; ?></a></span>
-
-                                        </div>
-                                    </div>
-                                <?php
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!--====== End - Section Content ======-->
-    </div>
-    <!--====== End - Section 2 ======-->
 
 
 
 
     <!--====== Section 9 ======-->
-    <div class="u-s-p-b-60">
+    <!-- <div class="u-s-p-b-60">
 
-        <!--====== Section Content ======-->
         <div class="section__content">
             <div class="container">
                 <div class="row">
@@ -300,17 +212,15 @@
                 </div>
             </div>
         </div>
-        <!--====== End - Section Content ======-->
-    </div>
+    </div> -->
     <!--====== End - Section 9 ======-->
 
 
 
 
     <!--====== Section 11 ======-->
-    <div class="u-s-p-b-90 u-s-m-b-30">
+    <!-- <div class="u-s-p-b-90 u-s-m-b-30">
 
-        <!--====== Section Intro ======-->
         <div class="section__intro u-s-m-b-46">
             <div class="container">
                 <div class="row">
@@ -318,18 +228,15 @@
                         <div class="section__text-wrap">
                             <h1 class="section__heading u-c-secondary u-s-m-b-12">Partner</h1>
 
-                            <!-- <span class="section__span u-c-silver">WHAT OUR CLIENTS SAY</span> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--====== End - Section Intro ======-->
 
         <div class="section__content">
             <div class="container">
 
-                <!--====== Brand Slider ======-->
                 <div class="slider-fouc">
                     <div class="owl-carousel" id="brand-slider" data-item="5">
                         <div class="brand-slide">
@@ -370,12 +277,10 @@
                         </div>
                     </div>
                 </div>
-                <!--====== End - Brand Slider ======-->
             </div>
         </div>
 
-        <!--====== End - Section Content ======-->
-    </div>
+    </div> -->
     <!--====== End - Section 11 ======-->
 
 

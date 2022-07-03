@@ -33,7 +33,12 @@
 
                                          <li>
 
-                                             <a class="dash-active" href="<?= base_url('user/registrasiPenjual') ?>">Daftar Menjadi Penjual</a>
+                                             <a class="dash-active" href="<?= base_url('User') ?>/myorder">Daftar Pesanan</a>
+                                         </li>
+
+                                         <li>
+
+                                             <a class="dash-active" href="<?= base_url('user/registrasiPenjual') ?>">Toko</a>
                                          </li>
 
                                      </ul>
@@ -122,7 +127,7 @@
                                              <div class="u-s-m-b-16">
 
                                                  <a class="dash__custom-link btn--e-transparent-brand-b-2" href="<?= base_url('user/edit') ?>">Edit Profile</a>
-                                                 <a class="dash__custom-link btn--e-brand-b-2" href="#">Change Password</a>
+                                                 <!-- <a class="dash__custom-link btn--e-brand-b-2" href="#">Change Password</a> -->
 
                                              </div>
                                              <div>
@@ -143,29 +148,36 @@
  </div>
  <!--====== End - App Content ======-->
 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
 
- <!--====== Main Footer ======-->
-<footer>
-    <div class="outer-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="outer-footer__content u-s-m-b-40">
+ <!--====== Modal Section ======-->
 
-                        <span class="outer-footer__content-title">Kontak Kami</span>
-                        <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
+ <footer>
+     <div class="outer-footer">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-4 col-md-6">
+                     <div class="outer-footer__content u-s-m-b-40">
 
-                            <span>Jl.Raya Rungkut Madya, Gunung Anyar, Surabaya</span>
-                        </div>
-                        <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
+                         <span class="outer-footer__content-title">Kontak Kami</span>
+                         <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
 
-                            <span>0878 1148 8302</span>
-                        </div>
-                        <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
+                             <span>Jl.Raya Rungkut Madya, Gunung Anyar, Surabaya</span>
+                         </div>
+                         <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
 
-                            <span>ecois.upnjatim@gmail.com</span>
-                        </div>
-                        <!-- <div class="outer-footer__social">
+                             <span>0878 1148 8302</span>
+                         </div>
+                         <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
+
+                             <span>ecois.upnjatim@gmail.com</span>
+                         </div>
+                         <!-- <div class="outer-footer__social">
                             <ul>
                                 <li>
 
@@ -177,9 +189,9 @@
                                 </li>
                             </ul>
                         </div> -->
-                    </div>
-                </div>
-                <!-- <div class="col-lg-4 col-md-6">
+                     </div>
+                 </div>
+                 <!-- <div class="col-lg-4 col-md-6">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="outer-footer__content u-s-m-b-40">
@@ -243,7 +255,7 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- <div class="col-lg-4 col-md-12">
+                 <!-- <div class="col-lg-4 col-md-12">
                     <div class="outer-footer__content">
 
                         <span class="outer-footer__content-title">Join our Newsletter</span>
@@ -280,57 +292,29 @@
                         </form>
                     </div>
                 </div> -->
-            </div>
-        </div>
-    </div>
-    <div class="lower-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="lower-footer__content">
-                        <div class="lower-footer__copyright">
-
-                            <span>Copyright © 2022</span>
-
-                            <a href="index.html">ECOIS UPN JATIM</a>
-
-                            <span>All Right Reserved</span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
- <!--====== Modal Section ======-->
-
-
- <!--====== Unsubscribe or Subscribe Newsletter ======-->
- <div class="modal fade" id="dash-newsletter">
-     <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content modal--shadow">
-             <div class="modal-body">
-                 <form class="d-modal__form">
-                     <div class="u-s-m-b-15">
-                         <h1 class="gl-modal-h1">Newsletter Subscription</h1>
-
-                         <span class="gl-modal-text">I have read and understood</span>
-
-                         <a class="d_modal__link" href="dash-my-profile.html">Ludus Privacy Policy</a>
-                     </div>
-                     <div class="gl-modal-btn-group">
-
-                         <button class="btn btn--e-brand-b-2" type="submit">SUBSCRIBE</button>
-
-                         <button class="btn btn--e-grey-b-2" type="button" data-dismiss="modal">CANCEL</button>
-                     </div>
-                 </form>
              </div>
          </div>
      </div>
- </div>
+     <div class="lower-footer">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12">
+                     <div class="lower-footer__content">
+                         <div class="lower-footer__copyright">
+
+                             <span>Copyright © 2022</span>
+
+                             <a href="index.html">ECOIS UPN JATIM</a>
+
+                             <span>All Right Reserved</span>
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </footer>
 
  <!--====== Unsubscribe or Subscribe Newsletter ======-->
  <!--====== End - Modal Section ======-->
@@ -339,7 +323,6 @@
 
 
 
- <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
  <!--====== Vendor Js ======-->
  <script src="<?php echo base_url(); ?>assets/client/js/vendor.js"></script>
