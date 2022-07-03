@@ -28,6 +28,14 @@ class Home extends CI_Controller
 		$this->load->view('template/default', $this->data);
 	}
 
+	function about()
+	{
+
+		$this->data['view']    = 'about';
+		$this->data['param']    = '';
+		$this->load->view('template/default', $this->data);
+	}
+
 	function regist()
 	{
 

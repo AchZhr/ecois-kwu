@@ -48,8 +48,14 @@
                              </li>
 
 
+
                              <li>
                                  <a href="<?= base_url('Katalog/index/All') ?>" class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i></a>
+                             </li>
+
+
+                             <li>
+                                 <a href="<?= base_url('Home/about') ?>"><i class="fas fa-info-circle"></i></a>
                              </li>
 
 
@@ -73,12 +79,28 @@
                                                  <span>Akun</span></a>
                                          </li>
 
+                                         <?php
+                                            if ($this->session->userdata('status_akun') == 9) {
+
+
+                                            ?>
+                                             <li>
+
+                                                 <a target="_blank" href="<?= base_url('Admin') ?>"><i class="fas fa-user u-s-m-r-6"></i>
+
+                                                     <span>Admin</span></a>
+                                             </li>
+
+                                         <?php } ?>
+
                                          <li>
 
                                              <a href="<?= base_url('front/logout') ?>"><i class="fas fa-lock-open u-s-m-r-6"></i>
 
                                                  <span>Keluar</span></a>
                                          </li>
+
+
 
                                      <?php
                                         } else {

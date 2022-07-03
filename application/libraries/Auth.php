@@ -108,7 +108,7 @@ class Auth
 					'npm'   => $result['npm'],
 					'nama'   => $result['nama'],
 					'seller'   => $result['seller'],
-					'status_akun'   => $result['jurusan'],
+					'status_akun'   => $result['status_akun'],
 					'logged_in'   => true,
 
 				)

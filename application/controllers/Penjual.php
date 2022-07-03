@@ -8,6 +8,7 @@ class Penjual extends Data_Controller
         $this->load->model('penjual_model');
         $this->load->model('produk_model');
         $this->load->model('toko_model');
+        $this->load->model('admin_model');
     }
 
 
@@ -24,14 +25,12 @@ class Penjual extends Data_Controller
                     'box'         => 'light-blue',
                     'total'     => $this->produk_model->getTotalProduk($toko->id_toko),
                     'title'        => 'Total Produk',
-                    'link'    => 'Barang',
                     'icon'        => 'cubes'
                 ],
                 [
                     'box'         => 'olive',
-                    'total'     => 10,
+                    'total'     => $this->produk_model->transaksiCount(),
                     'title'        => 'Order',
-                    'link'    => 'kategori',
                     'icon'        => 'list'
                 ]
             ];

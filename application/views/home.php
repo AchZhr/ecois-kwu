@@ -46,39 +46,80 @@
             <div class="hero-slide hero-slide--2">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="slider-content slider-content--animation">
-
-                                <span class="content-span-1 u-c-white">Lorem ipsum dolor sit amet</span>
-
-                                <span class="content-span-2 u-c-white">Lorem ipsum dolor sit amet</span>
-
-                                <span class="content-span-3 u-c-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam velit</span>
+                        <?php
+                        if ($this->session->userdata('logged_in')) {
 
 
-                                <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog/index/All') ?>">Belanja Sekarang!</a>
+                        ?>
+                            <div class="col-12">
+                                <div class="slider-content slider-content--animation">
+
+                                    <span class="content-span-1 u-c-white">Selamat Datang </span>
+
+                                    <span class="content-span-2 u-c-white"><?= $this->session->userdata('nama') ?></span>
+
+                                    <span class="content-span-3 u-c-white">Di ECOIS UPN Veteran Jawa Timur</span>
+
+
+                                    <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog/index/All') ?>">Belanja Sekarang!</a>
+                                </div>
                             </div>
-                        </div>
+                        <?php } else {
+                        ?>
+                            <div class="col-12">
+                                <div class="slider-content slider-content--animation">
+
+                                    <span class="content-span-1 u-c-white">Selamat Datang</span>
+
+                                    <span class="content-span-2 u-c-white">Silahkan Login</span>
+
+                                    <span class="content-span-3 u-c-white">Login Untuk Mulai Belanja</span>
+
+
+                                    <a class="shop-now-link btn--e-brand" href="<?= base_url('front/login') ?>">Login</a>
+                                </div>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
             <div class="hero-slide hero-slide--3">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="slider-content slider-content--animation">
-
-                                <span class="content-span-1 u-c-secondary">Lorem ipsum dolor sit amet</span>
-
-                                <span class="content-span-2 u-c-secondary">Lorem ipsum dolor sit amet</span>
-
-                                <span class="content-span-3 u-c-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quibusdam velit</span>
+                        <?php
+                        if ($this->session->userdata('logged_in')) {
 
 
+                        ?>
+                            <div class="col-12">
+                                <div class="slider-content slider-content--animation">
 
-                                <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog/index/All') ?>">Belanja Sekarang!</a>
+                                    <span class="content-span-1 u-c-white">Selamat Datang </span>
+
+                                    <span class="content-span-2 u-c-white"><?= $this->session->userdata('nama') ?></span>
+
+                                    <span class="content-span-3 u-c-white">Di ECOIS UPN Veteran Jawa Timur</span>
+
+
+                                    <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog/index/All') ?>">Belanja Sekarang!</a>
+                                </div>
                             </div>
-                        </div>
+                        <?php } else {
+                        ?>
+                            <div class="col-12">
+                                <div class="slider-content slider-content--animation">
+
+                                    <span class="content-span-1 u-c-white">Selamat Datang</span>
+
+                                    <span class="content-span-2 u-c-white">Silahkan Login</span>
+
+                                    <span class="content-span-3 u-c-white">Login Untuk Mulai Belanja</span>
+
+
+                                    <a class="shop-now-link btn--e-brand" href="<?= base_url('front/login') ?>">Login</a>
+                                </div>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -149,8 +190,9 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="load-more">
+                            <a class="shop-now-link btn--e-brand" href="<?= base_url('Katalog/index/All') ?>">Lihat Semua</a>
 
-                            <button class="btn btn--e-brand" type="button">Load More</button>
+
                         </div>
                     </div>
                 </div>

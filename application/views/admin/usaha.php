@@ -2,7 +2,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Dashboard
+            Usaha
         </h1>
     </section>
     <!-- Main content -->
@@ -10,20 +10,54 @@
     <section class="content">
 
         <div class="row">
-            <?php foreach ($param['box'] as $info_box) : ?>
-                <div class="col-lg-3 col-xs-6">
-                    <div class="small-box bg-<?= $info_box->box ?>">
-                        <div class="inner">
-                            <h3 class="count"><?= $info_box->total; ?></h3>
-                            <p><?= $info_box->title; ?></p>
-                        </div>
-                        <div class="icon">
-                            <i class="fa fa-<?= $info_box->icon ?>"></i>
-                        </div>
+            <div class="col-md-12">
+                <div class="box box-info">
+                    <div class='box-header  with-border'>
+                        <h3 class='box-title'>Data Usaha</h3>
 
                     </div>
+                    <div class="box-body">
+                        <table id="myTable" class="table table-bordered table-hover ">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>ID</th>
+                                    <th>Pemilik</th>
+                                    <th>Nama Usaha</th>
+                                    <th>Kategori Usaha</th>
+                                    <th>Tanggal Regist</th>
+                                    <th>Lokasi</th>
+                                    <th>IG</th>
+                                    <th>FB</th>
+                                    <th>WA</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $no = 0;
+                                foreach ($param as $produk) { ?>
+                                    <tr>
+                                        <td><?php echo ++$no; ?></td>
+
+                                        <td><?php echo $produk->id_toko; ?></td>
+                                        <td><?php echo $produk->npm; ?></td>
+                                        <td><?php echo $produk->nama_toko; ?></td>
+                                        <td><?php echo $produk->kategori; ?></td>
+                                        <td><?php echo $produk->tgl_regist; ?></td>
+                                        <td><?php echo $produk->lokasi; ?></td>
+                                        <td><?php echo $produk->instagram; ?></td>
+                                        <td><?php echo $produk->fb; ?></td>
+                                        <td><?php echo $produk->wa; ?></td>
+
+
+
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            <?php endforeach; ?>
+            </div>
         </div>
 
     </section>
@@ -66,7 +100,7 @@
 <script src="<?php echo base_url() ?>assets/admin/bower_components/select2/dist/js/select2.min.js"></script>
 <script>
     $(document).ready(function() {
-
+        $('#myTable').DataTable();
     });
 </script>
 </body>
