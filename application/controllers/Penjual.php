@@ -29,7 +29,7 @@ class Penjual extends Data_Controller
                 ],
                 [
                     'box'         => 'olive',
-                    'total'     => $this->produk_model->transaksiCount(),
+                    'total'     => $this->toko_model->transaksiCount($toko->id_toko),
                     'title'        => 'Order',
                     'icon'        => 'list'
                 ]

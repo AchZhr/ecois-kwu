@@ -27,4 +27,13 @@ class toko_model extends Data_Model
         $this->db->where('id_toko', $id);
         return $this->db->get()->row();
     }
+
+    function transaksiCount($id)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_order');
+        $this->db->where('id_toko', $id);
+
+        return $this->db->get()->num_rows();
+    }
 }

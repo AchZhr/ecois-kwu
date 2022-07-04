@@ -154,7 +154,7 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-5 u-s-m-b-30">
 
-                        <a class="collection" href="shop-side-version-2.html">
+                        <a class="collection" href="<?= base_url('Katalog/index/FNB') ?>">
                             <div class="aspect aspect--bg-grey aspect--square">
 
                                 <img class="aspect__img collection__img" src="<?php echo base_url(); ?>assets/client/images/collection/coll-1.jpg" alt="">
@@ -163,7 +163,7 @@
                     </div>
                     <div class="col-lg-7 col-md-7 u-s-m-b-30">
 
-                        <a class="collection" href="shop-side-version-2.html">
+                        <a class="collection" href="<?= base_url('Katalog/index/KNA') ?>">
                             <div class="aspect aspect--bg-grey aspect--1286-890">
 
                                 <img class="aspect__img collection__img" src="<?php echo base_url(); ?>assets/client/images/collection/coll-2.jpg" alt="">
@@ -172,7 +172,7 @@
                     </div>
                     <div class="col-lg-7 col-md-7 u-s-m-b-30">
 
-                        <a class="collection" href="shop-side-version-2.html">
+                        <a class="collection" href="<?= base_url('Katalog/index/HNA') ?>">
                             <div class="aspect aspect--bg-grey aspect--1286-890">
 
                                 <img class="aspect__img collection__img" src="<?php echo base_url(); ?>assets/client/images/collection/coll-3.jpg" alt="">
@@ -181,7 +181,7 @@
                     </div>
                     <div class="col-lg-5 col-md-5 u-s-m-b-30">
 
-                        <a class="collection" href="shop-side-version-2.html">
+                        <a class="collection" href="<?= base_url('Katalog/index/FNA') ?>">
                             <div class="aspect aspect--bg-grey aspect--square">
 
                                 <img class="aspect__img collection__img" src="<?php echo base_url(); ?>assets/client/images/collection/coll-4.jpg" alt="">
