@@ -109,13 +109,13 @@
                                         ?>
                                          <li>
 
-                                             <a href="<?= base_url('front/login'); ?>"><i class="fas fa-user-plus u-s-m-r-6"></i>
+                                             <a href="<?= base_url('front/login'); ?>"><i class="fas fa-lock u-s-m-r-6"></i>
 
                                                  <span>Masuk</span></a>
                                          </li>
                                          <li>
 
-                                             <a href="<?= base_url('Home/registrasi'); ?>"><i class="fas fa-lock u-s-m-r-6"></i>
+                                             <a href="<?= base_url('Home/registrasi'); ?>"><i class="fas fa-user-plus u-s-m-r-6"></i>
 
                                                  <span>Daftar</span></a>
                                          </li>
